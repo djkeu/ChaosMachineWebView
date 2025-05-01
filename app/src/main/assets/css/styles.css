@@ -1,0 +1,180 @@
+/* ===== Font Faces ===== */
+@font-face {
+    font-family: 'RobotoMono';
+    src: local('Roboto Mono'),
+      /* PC Path (original) */
+      url('../fonts/RobotoMono-Regular.woff2') format('woff2'),
+      url('../fonts/RobotoMono-Regular.ttf') format('truetype'),
+      /* Android Fallback Path */
+      url('file:///android_asset/web/fonts/RobotoMono-Regular.woff2') format('woff2'),
+      url('file:///android_asset/web/fonts/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+}
+  
+  /* ===== Mobile-First Base Styles ===== */
+:root {
+    /* Color System */
+    --safe-area: env(safe-area-inset-top, 0px);
+    --primary: #4285f4;
+    --background: #006D5B;
+    --output-bg: #1E3A3A;
+    --text-primary: #F5F5F5;
+    --success: #388E3C;
+    --danger: #D32F2F;
+    --border: #2F4F4F;
+    
+    /* Typography */
+    --font-base: 1.6rem;
+    --font-heading: 2.2rem;
+    --font-code: 'RobotoMono', monospace;
+    
+    /* Spacing */
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    
+    /* Animation */
+    --transition-speed: 120ms;
+  }
+  
+  /* ===== Core Styles ===== */
+  html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%; /* 1rem = 10px */
+    touch-action: manipulation;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    padding: calc(var(--safe-area) + var(--space-md)) var(--space-md) var(--space-md);
+    font-size: var(--font-base);
+    font-family: var(--font-code), 'Courier New', monospace;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  
+  h1 {
+    margin: 0.2em 0;
+    font-size: var(--font-heading);
+    font-weight: 400;
+    color: var(--text-primary);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+  
+  /* ===== Output Console ===== */
+  #output {
+    white-space: pre-wrap;
+    background-color: var(--output-bg);
+    height: 80vh;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-anchor: none;
+    touch-action: pan-y;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+    will-change: transform;
+    
+    /* Scrollbar hiding */
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+      background: transparent;
+    }
+    
+    /* Text formatting */
+    font-family: var(--font-code);
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+  
+  /* ===== Buttons ===== */
+  button {
+    min-width: 64px;
+    min-height: 48px;
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: 24px;
+    font-size: 1.4rem;
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: var(--space-sm);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    
+    &:active {
+      transform: scale(0.96);
+      opacity: 0.9;
+    }
+    
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+  
+  #startBtn {
+    background-color: var(--success);
+    color: var(--text-primary);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  #stopBtn {
+    background-color: var(--danger);
+    color: var(--text-primary);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  /* ===== Android-Specific Optimizations ===== */
+  @media (max-height: 500px) {
+    #output {
+      height: 65vh;
+      max-height: 65vh;
+    }
+  }
+  
+  /* Prevent text selection */
+  * {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  /* ===== Dark Mode Support ===== */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #00332B;
+      --output-bg: #0D2B2B;
+      --border: #1A3D3D;
+    }
+  }
+  
+  /* ===== Animation Keyframes ===== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ===== Utility Classes ===== */
+  .text-center {
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
