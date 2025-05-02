@@ -1,5 +1,6 @@
 // Begin Template CodeBlock 1
 // FixMe: replace ModuleName
+// FixMe: replace this.name
 class ModuleName {
     constructor() {
       this.name = 'show_progress';
