@@ -33,7 +33,7 @@ class ModuleName {
         }
       } catch (e) {
         if (e.name !== 'AbortError') {
-          console.error("Progress error:", e);
+          console.error("Error:", e);
         }
       }
     }
