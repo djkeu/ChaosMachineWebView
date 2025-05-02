@@ -1,5 +1,5 @@
 // Note: Begin Template Code 1
-// ToDo: replace ModuleName
+// FixMe: replace ModuleName
 class ModuleName {
     constructor() {
       this.name = 'show_progress';
@@ -38,7 +38,7 @@ class ModuleName {
     }
 // ToDo: End Module code
   
-// Note: Begin Template code 2  
+// Note: Begin Template code 2
     async chunkedDelay(totalMs, chunkMs, signal) {
       const chunks = Math.ceil(totalMs / chunkMs);
       for (let i = 0; i < chunks; i++) {
@@ -52,6 +52,6 @@ class ModuleName {
       if (this.abortController) this.abortController.abort();
     }
   }
-// ToDo: replace ModuleName
+// FixMe: replace ModuleName
 window.ShowProgress = ModuleName;
 // Note: End Template code 2  
