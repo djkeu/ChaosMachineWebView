@@ -30,6 +30,9 @@
     - ToDo: RandomCalculations.js
     - ToDo: ImageViewer.js
         - ToDo: image directory
+    - ToDo: NameTaker.js
+        - ToDo: prompt for name
+        - ToDo: print: so, your name is 'x'. why don't I believe you
 
     - Done: ModuleTemplate.js
     
