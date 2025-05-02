@@ -1,4 +1,4 @@
-// Note: Begin Template CodeBlock 1
+// Begin Template CodeBlock 1
 // FixMe: replace ModuleName
 class ModuleName {
     constructor() {
@@ -11,7 +11,7 @@ class ModuleName {
       this.shouldStop = false;
       this.abortController = new AbortController();
       const signal = this.abortController.signal;
-// Note: End Template CodeBlock 1
+// End Template CodeBlock 1
 
 // ToDo: Begin Module code
       try {
@@ -38,7 +38,7 @@ class ModuleName {
     }
 // ToDo: End Module code
   
-// Note: Begin Template CodeBlock 2
+// Begin Template CodeBlock 2
     async chunkedDelay(totalMs, chunkMs, signal) {
       const chunks = Math.ceil(totalMs / chunkMs);
       for (let i = 0; i < chunks; i++) {
@@ -54,4 +54,4 @@ class ModuleName {
   }
 // FixMe: replace ModuleName
 window.ShowProgress = ModuleName;
-// Note: End Template CodeBlock 2
+// End Template CodeBlock 2
