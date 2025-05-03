@@ -20,27 +20,36 @@
 
 
 ### Modules
+    - Note: ModuleTemplate.js
+    
     - FixMe: delays in HaikuModules
 
+    - ToDo: ShowColorBlock.js
+        - ToDo: display block of random color
+            - Note: text file with color names?
+        - ToDo: display name/code of color in block in white/black letters
+        - ToDo: animation
+
     - ToDo: RandomClock.js
+
     - ToDo: PoemReader.js
         - ToDo: read .txt file
         - ToDo: one .txt file per poem
         - ToDo: create PoemTemplate to use for individual poems
+
     - ToDo: RandomCalculations.js
+
     - ToDo: ImageViewer.js
         - ToDo: image directory
+
     - ToDo: NameTaker.js
         - ToDo: prompt for name
         - ToDo: print: so, your name is 'x'. why don't I believe you
 
-    - Done: ModuleTemplate.js
-    
-
 
 ## Directory Structure
 
-- ToDo: update with fonts
+- ToDo: update to WebView directory structure
 
 ```
 chaos_machine/
