@@ -16,30 +16,18 @@ class ModuleName {
 
 // ToDo: Begin Module code
       try {
-        await machine.display("\n\tShow progress:\n");
-        let percentage = 0;
-  
-        while (percentage < 100 && !signal.aborted && !this.shouldStop) {
-          percentage = Math.min(100, percentage + Math.random() * 15 + 3);
-          if (percentage != 100) {
-            await machine.display(`\tProgress: ${Math.round(percentage)}%\n`);
-  
-            await this.chunkedDelay(800 + Math.random() * 1200, 200, signal);
-          }
-        }
-  
-        if (!signal.aborted && !this.shouldStop) {
-          await machine.display("\nProgress: 100%\n\n");
-        }
+        await machine.display("\n\tThis is a module template\n");
+
       } catch (e) {
         if (e.name !== 'AbortError') {
           console.error("Error:", e);
         }
       }
-    }
 // ToDo: End Module code
-  
+
 // Begin: Template CodeBlock 2
+    }  // end execute(machine)
+
     async chunkedDelay(totalMs, chunkMs, signal) {
       const chunks = Math.ceil(totalMs / chunkMs);
       for (let i = 0; i < chunks; i++) {
@@ -54,5 +42,5 @@ class ModuleName {
     }
   }
 // FixMe: replace ModuleName
-window.ShowProgress = ModuleName;
+window.ModuleName = ModuleName;
 // End: Template CodeBlock 2
