@@ -48,7 +48,6 @@
 
 
 ## Directory Structure
-
 - ToDo: update to WebView directory structure
 
 ```
