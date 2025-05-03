@@ -1,6 +1,6 @@
 // Begin: Template CodeBlock 1
-// FixMe: replace ModuleName
-// FixMe: replace this.name
+// ToDo: replace ModuleName
+// ToDo: replace this.name
 class ModuleName {
     constructor() {
       this.name = 'show_progress';
@@ -41,6 +41,6 @@ class ModuleName {
       if (this.abortController) this.abortController.abort();
     }
   }
-// FixMe: replace ModuleName
+// ToDo: replace ModuleName
 window.ModuleName = ModuleName;
 // End: Template CodeBlock 2
