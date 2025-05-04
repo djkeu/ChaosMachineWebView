@@ -14,7 +14,7 @@ class HaikuTest {
       const signal = this.abortController.signal;
 // End: Template CodeBlock 1
 
-// ToDo: Begin Module code
+// Begin: Module code
 
       try {
         let testVar = document.getElementById("output");
@@ -36,7 +36,7 @@ class HaikuTest {
           console.error("Error:", e);
         }
       }
-// ToDo: End Module code
+// End: Module code
 
 // Begin: Template CodeBlock 2
     }  // end execute(machine)
