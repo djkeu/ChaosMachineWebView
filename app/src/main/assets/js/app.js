@@ -9,7 +9,12 @@ class ChaosApp {
             this.machine = new ChaosMachine(document.getElementById('output'));
 
             // Register modules
-            [new HaikuElastiek(), new HaikuMat(), new ShowProgress()]
+            [
+            new HaikuElastiek(),
+            // new HaikuMat(),
+            new ShowProgress(),
+            new RedAndBlue()
+            ]
                 .forEach(m => this.machine.registerModule(m));
 
             // Get buttons
