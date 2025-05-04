@@ -17,15 +17,16 @@ class ColorBlue {
       try {
         let testVar = document.getElementById("output");
         testVar.style.backgroundColor = "darkblue";
-        testVar.style.fontSize = "xx-large";
 
         await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n\n");
         await this.chunkedDelay(1500, 500, signal);
+
+        testVar.style.fontSize = "xx-large";
         await machine.display("\n\n\n\n\n\tBlue\n\n\n\n\n\n\n\n");
         await this.chunkedDelay(2500, 500, signal);
 
-        testVar.style.backgroundColor = "var(--output-bg)";
         testVar.style.fontSize = "var(--font-base";
+        testVar.style.backgroundColor = "var(--output-bg)";
 
       } catch (e) {
         if (e.name !== 'AbortError') {
