@@ -102,8 +102,8 @@
   }
 
   #inner-output {
-    width: 200px;
-    text-align: center;
+    width: 40%;
+    background-color: green;
   }
 
   /* ===== Buttons ===== */
