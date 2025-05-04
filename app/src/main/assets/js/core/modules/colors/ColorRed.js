@@ -16,9 +16,11 @@ class ColorRed {
 
       try {
         let testVar = document.getElementById("output");
-        testVar.style.backgroundColor = "red";
+        testVar.style.backgroundColor = "darkred";
         testVar.style.fontSize = "xx-large";
 
+        await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        await this.chunkedDelay(1500, 500, signal);
         await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n\n\tRed\n\n\n\n\n");
         await this.chunkedDelay(2500, 500, signal);
 
