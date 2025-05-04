@@ -1,9 +1,7 @@
 // Begin: Template CodeBlock 1
-// ToDo: replace ModuleName
-// ToDo: replace this.name
-class RedAndBlue {
+class ColorRed {
     constructor() {
-      this.name = 'red_blue';
+      this.name = 'color_red';
       this.shouldStop = false;
       this.abortController = null;
     }
@@ -14,19 +12,14 @@ class RedAndBlue {
       const signal = this.abortController.signal;
 // End: Template CodeBlock 1
 
-// ToDo: Begin Module code
+// Begin Module code
 
       try {
         let testVar = document.getElementById("output");
         testVar.style.backgroundColor = "red";
         testVar.style.fontSize = "xx-large";
 
-        await machine.display("\n\n\n\n\n\n\n\n\n\tRed\n\n\n\n\n");
-        await this.chunkedDelay(2500, 500, signal);
-
-        testVar.style.backgroundColor = "blue";
-
-        await machine.display("\n\tBlue\n\n\n\n\n\n\n\n");
+        await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n\n\tRed\n\n\n\n\n");
         await this.chunkedDelay(2500, 500, signal);
 
         testVar.style.backgroundColor = "var(--output-bg)";
@@ -37,7 +30,7 @@ class RedAndBlue {
           console.error("Error:", e);
         }
       }
-// ToDo: End Module code
+// End Module code
 
 // Begin: Template CodeBlock 2
     }  // end execute(machine)
@@ -55,6 +48,5 @@ class RedAndBlue {
       if (this.abortController) this.abortController.abort();
     }
   }
-// ToDo: replace ModuleName
-window.ModuleName = RedAndBlue;
+window.ModuleName = ColorRed;
 // End: Template CodeBlock 2

@@ -13,7 +13,8 @@ class ChaosApp {
             new HaikuElastiek(),
             // new HaikuMat(),
             new ShowProgress(),
-            new RedAndBlue()
+            new ColorRed(),
+            new ColorBlue()
             ]
                 .forEach(m => this.machine.registerModule(m));
 
