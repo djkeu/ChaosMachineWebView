@@ -17,11 +17,12 @@ class ColorRed {
       try {
         let testVar = document.getElementById("output");
         testVar.style.backgroundColor = "darkred";
+        // testVar.outerHTML="<div style='background-color: brown'>Red Red</div>"
 
-        await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n");
         await this.chunkedDelay(1500, 500, signal);
 
-        testVar.style.fontSize = "xx-large";
+        testVar.style.fontSize = "3em";
         await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n\n\tRed\n\n\n\n\n");
         await this.chunkedDelay(2500, 500, signal);
 
