@@ -1,9 +1,9 @@
 // Begin: Template CodeBlock 1
 // ToDo: replace ModuleName
 // ToDo: replace this.name
-class ModuleName {
+class HaikuTest {
     constructor() {
-      this.name = 'show_progress';
+      this.name = 'haiku_test';
       this.shouldStop = false;
       this.abortController = null;
     }
@@ -15,8 +15,21 @@ class ModuleName {
 // End: Template CodeBlock 1
 
 // ToDo: Begin Module code
+
       try {
-        await machine.display("\n\tThis is a module template\n");
+        let testVar = document.getElementById("output");
+        testVar.style.backgroundColor = "red";
+
+        await machine.display("\n\n\n\n\tThis is red\n\n\n\n\n");
+        await this.chunkedDelay(2500, 500, signal);
+
+        testVar.style.backgroundColor = "blue";
+
+        await machine.display("\n\tThis is blue\n\n\n\n");
+        await this.chunkedDelay(2500, 500, signal);
+
+        testVar.style.backgroundColor = "var(--output-bg)";
+
 
       } catch (e) {
         if (e.name !== 'AbortError') {
@@ -42,5 +55,5 @@ class ModuleName {
     }
   }
 // ToDo: replace ModuleName
-window.ModuleName = ModuleName;
+window.ModuleName = HaikuTest;
 // End: Template CodeBlock 2
