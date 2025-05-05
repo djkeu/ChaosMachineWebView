@@ -20,8 +20,8 @@ class ColorDarkRed {
         testVar.style.margin = "auto";
         testVar.style.marginTop = "30%";
         testVar.style.width = "80%";
+        // testVar.style.height = "50vh";
         testVar.style.maxHeight = "50vh";
-        // testVar.outerHTML="<div style='background-color: brown'>Red Red</div>"
 
         await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n");
         await this.chunkedDelay(1500, 500, signal);

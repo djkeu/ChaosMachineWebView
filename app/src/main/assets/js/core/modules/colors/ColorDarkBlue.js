@@ -20,14 +20,14 @@ class ColorDarkBlue {
         testVar.style.margin = "auto";
         testVar.style.marginTop = "30%";
         testVar.style.width = "80%";
+        // testVar.style.height = "50vh";
         testVar.style.maxHeight = "50vh";
-        // testVar.outerHTML="<div style='background-color: brown'>Blue blue</div>"
 
-        await machine.display("");
+        await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n");
         await this.chunkedDelay(1500, 500, signal);
 
         testVar.style.fontSize = "3em";
-        await machine.display("\tDarkBlue\n\n\n\n\n\n\n\n");
+        await machine.display("\n\tDarkBlue\n\n\n\n\n");
         await this.chunkedDelay(2500, 500, signal);
 
         testVar.style.fontSize = "var(--font-base";
