@@ -12,6 +12,11 @@
 
 ## ToDo
 
+
+### Vulnerabilities
+    - FixMe: webSettings.setJavaScriptEnabled(true);
+
+
 ### Interface
     - ToDo: mobile friendly interface (css)
 
