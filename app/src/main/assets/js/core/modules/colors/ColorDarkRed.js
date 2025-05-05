@@ -13,12 +13,20 @@ class ColorDarkRed {
             // Create red square
             this.redSquare = document.createElement('div');
             this.redSquare.style.position = 'fixed';
-            this.redSquare.style.top = '50%';
-            this.redSquare.style.left = '50%';
+            this.redSquare.style.top = '80%';
+            this.redSquare.style.left = '70%';
             this.redSquare.style.transform = 'translate(-50%, -50%)';
             this.redSquare.style.width = '200px';
             this.redSquare.style.height = '200px';
             this.redSquare.style.backgroundColor = 'darkred';
+
+            this.redSquare.textContent = "red";
+            // this.redSquare.style.color = "white";  // Make text visible
+            this.redSquare.style.fontSize = "200%";
+            this.redSquare.style.display = "flex";
+            this.redSquare.style.alignItems = "center";
+            this.redSquare.style.justifyContent = "center";
+            this.redSquare.style.fontWeight = "bold";
 
             // Add to output
             machine.output.appendChild(this.redSquare);
