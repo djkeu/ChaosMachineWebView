@@ -1,7 +1,7 @@
 // Begin: Template CodeBlock 1
-class ColorBlue {
+class ColorDarkBlue {
     constructor() {
-      this.name = 'color_blue';
+      this.name = 'color_dark_blue';
       this.shouldStop = false;
       this.abortController = null;
     }
@@ -23,7 +23,7 @@ class ColorBlue {
         await this.chunkedDelay(1500, 500, signal);
 
         testVar.style.fontSize = "3em";
-        await machine.display("\n\n\n\n\n\tBlue\n\n\n\n\n\n\n\n");
+        await machine.display("\n\n\n\n\n\tDarkBlue\n\n\n\n\n\n\n\n");
         await this.chunkedDelay(2500, 500, signal);
 
         testVar.style.fontSize = "var(--font-base";
@@ -52,5 +52,5 @@ class ColorBlue {
       if (this.abortController) this.abortController.abort();
     }
   }
-window.ModuleName = ColorBlue;
+window.ModuleName = ColorDarkBlue;
 // End: Template CodeBlock 2
