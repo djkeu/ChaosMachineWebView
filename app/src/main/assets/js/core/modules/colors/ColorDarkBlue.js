@@ -1,64 +1,61 @@
-// Begin: Template CodeBlock 1
-class ColorDarkBlue {
+class ColorDarkRed {
     constructor() {
-      this.name = 'color_dark_blue';
-      this.shouldStop = false;
-      this.abortController = null;
+        this.name = 'color_dark_blue';
+        this.shouldStop = false;
+        this.redSquare = null;
+        this.cleanup = null;
     }
 
     async execute(machine) {
-      this.shouldStop = false;
-      this.abortController = new AbortController();
-      const signal = this.abortController.signal;
-// End: Template CodeBlock 1
+        this.shouldStop = false;
 
-// Begin Module code
+        try {
+            // Create red square
+            this.redSquare = document.createElement('div');
+            this.redSquare.style.position = 'fixed';
+            this.redSquare.style.top = '50%';
+            this.redSquare.style.left = '50%';
+            this.redSquare.style.transform = 'translate(-50%, -50%)';
+            this.redSquare.style.width = '200px';
+            this.redSquare.style.height = '200px';
+            this.redSquare.style.backgroundColor = 'darkblue';
 
-      try {
-        let testVar = document.getElementById("output");
-        testVar.style.backgroundColor = "darkblue";
-        testVar.style.margin = "auto";
-        testVar.style.marginTop = "30%";
-        testVar.style.width = "80%";
-        // testVar.style.height = "50vh";
-        testVar.style.maxHeight = "50vh";
+            // Add to output
+            machine.output.appendChild(this.redSquare);
 
-        await machine.display("\n\n\n\n\n\n\n\n\n\n\n\n");
-        await this.chunkedDelay(1500, 500, signal);
+            // Setup cleanup function
+            this.cleanup = () => {
+                if (this.redSquare && this.redSquare.parentNode) {
+                    this.redSquare.parentNode.removeChild(this.redSquare);
+                    this.redSquare = null;
+                }
+            };
 
-        testVar.style.fontSize = "3em";
-        await machine.display("\n\tDarkBlue\n\n\n\n\n");
-        await this.chunkedDelay(2500, 500, signal);
+            // Wait until stopped or 3 seconds pass
+            await new Promise((resolve) => {
+                const timeout = setTimeout(() => {
+                    this.cleanup();
+                    resolve();
+                }, 3000);
 
-        testVar.style.fontSize = "var(--font-base";
-        testVar.style.backgroundColor = "var(--output-bg)";
-        testVar.style.width = "100%";
-        testVar.style.maxHeight = "80vh";
-        // FixMe: percentage?
-        testVar.style.marginTop = "4%";
+                this.stopSignal = () => {
+                    clearTimeout(timeout);
+                    this.cleanup();
+                    resolve();
+                };
+            });
 
-      } catch (e) {
-        if (e.name !== 'AbortError') {
-          console.error("Error:", e);
+        } catch (e) {
+            if (this.cleanup) this.cleanup();
+            if (e.name !== 'AbortError') {
+                console.error("Error in ColorDarkRed:", e);
+            }
         }
-      }
-// End Module code
-
-// Begin: Template CodeBlock 2
-    }  // end execute(machine)
-
-    async chunkedDelay(totalMs, chunkMs, signal) {
-      const chunks = Math.ceil(totalMs / chunkMs);
-      for (let i = 0; i < chunks; i++) {
-        if (this.shouldStop || signal.aborted) throw new Error('AbortError');
-        await new Promise(r => setTimeout(r, Math.min(chunkMs, totalMs - i * chunkMs)));
-      }
     }
 
     abort() {
-      this.shouldStop = true;
-      if (this.abortController) this.abortController.abort();
+        this.shouldStop = true;
+        if (this.stopSignal) this.stopSignal();
     }
-  }
-window.ModuleName = ColorDarkBlue;
-// End: Template CodeBlock 2
+}
+window.ModuleName = ColorDarkRed;

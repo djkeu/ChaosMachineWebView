@@ -6,26 +6,34 @@ class ChaosMachine {
     this.activeExecution = null;
     this.outputBuffer = [];
     this.isWriting = false;
+    this.bufferFlushPromise = Promise.resolve(); // Track buffer flushing
   }
 
   registerModule(module) {
     this.modules.push(module);
   }
 
+  async clearOutput() {
+    // Wait for any pending writes to complete
+    await this.bufferFlushPromise;
+    this.outputBuffer = []; // Clear pending buffer
+    this.output.textContent = ''; // Clear immediately
+  }
+
   async display(text) {
     this.outputBuffer.push(text);
     if (!this.isWriting) {
-      this.flushBuffer();
+      this.bufferFlushPromise = this.flushBuffer();
     }
   }
 
   async flushBuffer() {
     this.isWriting = true;
-    while (this.outputBuffer.length > 0) {
+    while (this.outputBuffer.length > 0 && this.isRunning) {
       const text = this.outputBuffer.shift();
       this.output.textContent += text;
       this.output.scrollTop = this.output.scrollHeight;
-      await this.delay(10); // Small delay between writes
+      await this.delay(10);
     }
     this.isWriting = false;
   }
@@ -37,6 +45,7 @@ class ChaosMachine {
   async start() {
     if (this.isRunning) return;
     this.isRunning = true;
+    await this.clearOutput();
     await this.display("\n=== CHAOS MACHINE STARTED ===\n");
     this.runModules();
   }
@@ -46,10 +55,21 @@ class ChaosMachine {
       const module = this.modules[Math.floor(Math.random() * this.modules.length)];
       this.activeExecution = module;
       try {
-        await this.display(`\n--- Running ${module.name} ---\n`);
+        // Clear and show module header
+        await this.clearOutput();
+        await this.display(`--- Running ${module.name} ---`);
+
+        // Wait 1 second with header visible
+        await this.delay(1000);
+
+        // Clear again before module execution
+        await this.clearOutput();
+
+        // Execute module with clean slate
         await module.execute(this);
+
       } catch (e) {
-        if (e.name !== 'AbortError') { // Don't log abort errors
+        if (e.name !== 'AbortError') {
           console.error(`Module ${module.name} failed:`, e);
         }
       }
@@ -75,7 +95,9 @@ class ChaosMachine {
     // Signal all modules to stop
     this.modules.forEach(m => m.shouldStop = true);
 
-    // Direct output for stop message
+    // Wait for any pending operations
+    await this.bufferFlushPromise;
+    await this.clearOutput();
     await this.display("\n=== CHAOS MACHINE STOPPED ===\n");
   }
 }

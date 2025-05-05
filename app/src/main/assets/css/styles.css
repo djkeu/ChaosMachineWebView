@@ -101,11 +101,6 @@
     text-shadow: 0 1px 1px rgba(0,0,0,0.3);
   }
 
-  #inner-output {
-    width: 80%;
-    background-color: green;
-  }
-
   /* ===== Buttons ===== */
   button {
     min-width: 64px;
