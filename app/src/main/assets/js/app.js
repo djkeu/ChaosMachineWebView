@@ -10,7 +10,7 @@ class ChaosApp {
 
             // Register modules
             [
-            //new HaikuElastiek(),
+            new HaikuElastiek(),
             //new HaikuMat(),
             new ShowProgress(),
             new ColorDarkRed(),
