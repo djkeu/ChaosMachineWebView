@@ -20,7 +20,7 @@ class ColorDarkRed {
             this.redSquare.style.height = '200px';
             this.redSquare.style.backgroundColor = 'darkred';
 
-            this.redSquare.textContent = "red";
+            this.redSquare.textContent = "dark red";
             // this.redSquare.style.color = "white";  // Make text visible
             this.redSquare.style.fontSize = "200%";
             this.redSquare.style.display = "flex";
