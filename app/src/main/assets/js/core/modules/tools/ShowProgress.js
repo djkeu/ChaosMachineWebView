@@ -11,7 +11,7 @@ class ShowProgress {
     const signal = this.abortController.signal;
 
     try {
-      await machine.display("\n\tShow progress:\n");
+      await machine.display("\n\tShow progress:\n\n");
       let percentage = 0;
 
       while (percentage < 100 && !signal.aborted && !this.shouldStop) {
