@@ -14,7 +14,8 @@
 
 
 ### Vulnerabilities
-    - FixMe: webSettings.setJavaScriptEnabled(true);
+    - FixMe: MainActivity.java:
+        - webSettings.setJavaScriptEnabled(true);
 
 
 ### Interface
