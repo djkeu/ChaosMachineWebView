@@ -57,15 +57,13 @@ class ChaosMachine {
       try {
         // Clear and show module header
         await this.clearOutput();
-        await this.delay(1000);
         await this.display(`--- Running ${module.name} ---`);
 
         // Wait 1 second with header visible
-        await this.delay(2000);
+        await this.delay(1000);
 
         // Clear again before module execution
         await this.clearOutput();
-        await this.delay(1000);
 
         // Execute module with clean slate
         await module.execute(this);
