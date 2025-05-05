@@ -19,8 +19,10 @@
 
 
 ### Interface
-    - ToDo: mobile friendly interface (css)
+    - ToDo: ChaosMachine.js
+        - delays module headers
 
+    - Done: mobile friendly interface (css)
     - Done: Start button to start the machine
     - Done: Stop button to stop the machine
 
