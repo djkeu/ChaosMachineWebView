@@ -8,13 +8,14 @@ class ColorDarkRed {
 
     async execute(machine) {
         this.shouldStop = false;
+        let leftPosition = '70%';
 
         try {
             // Create red square
             this.redSquare = document.createElement('div');
             this.redSquare.style.position = 'fixed';
             this.redSquare.style.top = '80%';
-            this.redSquare.style.left = '70%';
+            this.redSquare.style.left = leftPosition;
             this.redSquare.style.transform = 'translate(-50%, -50%)';
             this.redSquare.style.width = '200px';
             this.redSquare.style.height = '200px';

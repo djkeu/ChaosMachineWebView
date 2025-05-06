@@ -10,10 +10,10 @@ class ChaosApp {
 
             // Register modules
             [
-            new HaikuElastiek(),
-            new HaikuMat(),
-            new ShowProgress(),
-            new ColorDarkBlue(),
+            //new HaikuElastiek(),
+            //new HaikuMat(),
+            //new ShowProgress(),
+            //new ColorDarkBlue(),
             new ColorDarkRed()
             ]
                 .forEach(m => this.machine.registerModule(m));
