@@ -22,7 +22,8 @@
     - ToDo: ChaosMachine.js
         - delays module headers
 
-    - Done: mobile friendly interface (css)
+    - ToDo: style app title (Chaos Machine)
+
     - Done: Start button to start the machine
     - Done: Stop button to stop the machine
 
