@@ -8,15 +8,16 @@ class ColorDarkRed {
 
     async execute(machine) {
         this.shouldStop = false;
-        const topPosition = getRandomPercentage(50, 80);
-        const leftPosition = getRandomPercentage(50, 70); // No import needed
+        const randomTopPosition = getRandomPercentage(50, 80);
+        const randomLeftPosition = getRandomPercentage(50, 70); // No import needed
+        const randomFontSize = getRandomPercentage(100, 250);
 
         try {
             // Create red square
             this.redSquare = document.createElement('div');
             this.redSquare.style.position = 'fixed';
-            this.redSquare.style.top = topPosition;
-            this.redSquare.style.left = leftPosition;
+            this.redSquare.style.top = randomTopPosition;
+            this.redSquare.style.left = randomLeftPosition;
             this.redSquare.style.transform = 'translate(-50%, -50%)';
             this.redSquare.style.width = '6em';
             this.redSquare.style.height = '5.5em';
@@ -24,7 +25,7 @@ class ColorDarkRed {
 
             this.redSquare.textContent = "dark red";
             // this.redSquare.style.color = "white";  // Make text visible
-            this.redSquare.style.fontSize = "200%";
+            this.redSquare.style.fontSize = randomFontSize;
             this.redSquare.style.display = "flex";
             this.redSquare.style.alignItems = "center";
             this.redSquare.style.justifyContent = "center";
