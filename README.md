@@ -1,6 +1,11 @@
 # Chaos Machine
 
 
+## Version number
+    0.5.0
+    verion.number_of_modules.revision
+
+
 ## Description
     Android: Java / WebView / JavaScript 
     Prototype written in Python, switched to JavaScript
@@ -12,11 +17,9 @@
 
 ## ToDo
 
-
 ### Vulnerabilities
     - FixMe: MainActivity.java:
         - webSettings.setJavaScriptEnabled(true);
-
 
 ### Interface
     - ToDo: ChaosMachine.js
@@ -26,7 +29,6 @@
 
     - Done: Start button to start the machine
     - Done: Stop button to stop the machine
-
 
 ### Modules
     - Note: ModuleTemplate.js
