@@ -7,6 +7,8 @@
 
 
 ## Description
+    Chaos Machine is an art project that spews out random output taken from texts, scripts, sounds and images.
+
     Android: Java / WebView / JavaScript 
     Prototype written in Python, switched to JavaScript
     Artproject
