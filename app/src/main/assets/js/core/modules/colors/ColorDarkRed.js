@@ -8,7 +8,7 @@ class ColorDarkRed {
 
     async execute(machine) {
         this.shouldStop = false;
-        let leftPosition = '70%';
+        const leftPosition = getRandomPercentage(50, 70); // No import needed
 
         try {
             // Create red square
