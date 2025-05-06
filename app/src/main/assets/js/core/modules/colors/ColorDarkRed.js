@@ -8,13 +8,14 @@ class ColorDarkRed {
 
     async execute(machine) {
         this.shouldStop = false;
+        const topPosition = getRandomPercentage(50, 80);
         const leftPosition = getRandomPercentage(50, 70); // No import needed
 
         try {
             // Create red square
             this.redSquare = document.createElement('div');
             this.redSquare.style.position = 'fixed';
-            this.redSquare.style.top = '80%';
+            this.redSquare.style.top = topPosition;
             this.redSquare.style.left = leftPosition;
             this.redSquare.style.transform = 'translate(-50%, -50%)';
             this.redSquare.style.width = '200px';
