@@ -18,8 +18,8 @@ class ColorDarkRed {
             this.redSquare.style.top = topPosition;
             this.redSquare.style.left = leftPosition;
             this.redSquare.style.transform = 'translate(-50%, -50%)';
-            this.redSquare.style.width = '200px';
-            this.redSquare.style.height = '200px';
+            this.redSquare.style.width = '6em';
+            this.redSquare.style.height = '5.5em';
             this.redSquare.style.backgroundColor = 'darkred';
 
             this.redSquare.textContent = "dark red";
