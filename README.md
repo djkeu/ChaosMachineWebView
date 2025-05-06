@@ -22,6 +22,7 @@
 ### Vulnerabilities
     - FixMe: MainActivity.java:
         - webSettings.setJavaScriptEnabled(true);
+    - FixMe: ./shared/randomPercentager.js (script in index.html)
 
 ### Interface
     - ToDo: ChaosMachine.js
