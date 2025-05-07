@@ -1,24 +1,18 @@
 # Chaos Machine
 
-
 ## Version number
-    0.5.0
-    verion.number_of_modules.revision
-
+    MAJOR.MINOR.PATCH (SemVer) 
+    See for current version number:
+    - changelog.md
+    - app/build.gradle
 
 ## Description
-    Chaos Machine is an art project that spews out random output taken from texts, scripts, sounds and images.
+    Chaos Machine is an art project that spews out random output taken from texts, scripts, sounds and images. User interaction is coming. Randomness is not chaos. Chaos is not madness.
 
     Android: Java / WebView / JavaScript 
-    Prototype written in Python, switched to JavaScript
-    Artproject
-    Randomness
-    User interaction
-    Chaos is not madness
-
+    Prototype written in Python, switched to JavaScript for compatibility with WebView / mobile apps
 
 ## ToDo
-
 ### Vulnerabilities
     - FixMe: MainActivity.java:
         - webSettings.setJavaScriptEnabled(true);
@@ -59,7 +53,6 @@
     - ToDo: NameTaker.js
         - ToDo: prompt for name
         - ToDo: print: so, your name is 'x'. why don't I believe you
-
 
 ## Directory Structure
 - ToDo: update to WebView directory structure
