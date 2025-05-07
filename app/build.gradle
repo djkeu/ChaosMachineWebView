@@ -12,7 +12,7 @@ android {
         minSdk libs.versions.minSdk.get().toInteger()     // Changed from 21
         targetSdk libs.versions.targetSdk.get().toInteger() // Changed from 35
         versionCode 1
-        versionName "1.5.0"  // version.number_of_modules.changes
+        versionName "0.5.2"  // version.number_of_modules.revisions
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
