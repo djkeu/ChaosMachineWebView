@@ -11,8 +11,8 @@ More information about how this format at the bottom of the file.
 - ColorDarkRed module.
 
 ### Changed
-- Resizing darkred square.
-- Positioning of darkred square.
+- Width, height darkred square.
+- Position top, left of darkred square.
 
 ---
 
