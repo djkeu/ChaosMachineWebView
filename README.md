@@ -22,7 +22,7 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 - ToDo: ChaosMachine.js
   - delays module headers
 
-- ToDo: style app title (Chaos Machine)
+- TODO: style app title (Chaos Machine)
 
 - Done: Start button to start the machine
 - Done: Stop button to stop the machine
