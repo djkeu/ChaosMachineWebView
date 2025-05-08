@@ -22,46 +22,46 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 - `ToDo:` ChaosMachine.js
   - delays module headers
 
-- TODO: style app title (Chaos Machine)
+- `ToDo:` style app title (Chaos Machine)
 
-- Done: Start button to start the machine
-- Done: Stop button to stop the machine
+- `Done:` Start button to start the machine
+- `Done:` Stop button to stop the machine
 
 ### Modules
-- Note: ModuleTemplate.js is not accurate
+- `Note:` ModuleTemplate.js is not accurate
 
-- FixMe: delays in HaikuModules
-- FixMe: delays in ShowProgress should match percentages: test
+- `FixMe:` delays in HaikuModules
+- `FixMe:` delays in ShowProgress should match percentages: test
 
-- ToDo: BartModule.js
+- `ToDo:` BartModule.js
   - graph -> square
   - x + y: personal, public, private, professional
   - add time for third dimension
 
-- ToDo: ShowColorBlock.js
-  - ToDo: display block of random color
+- `ToDo:` ShowColorBlock.js
+  - `ToDo:` display block of random color
     - Note: text file with color names?
-  - ToDo: display name/code of color in block in white/black letters
-  - ToDo: animation
+  - `ToDo:` display name/code of color in block in white/black letters
+  - `ToDo:` animation
 
-- ToDo: RandomClock.js
+- `ToDo:` RandomClock.js
 
-- ToDo: PoemReader.js
-  - ToDo: read .txt file
-  - ToDo: one .txt file per poem
-  - ToDo: create PoemTemplate to use for individual poems
+- `ToDo:` PoemReader.js
+  - `ToDo:` read .txt file
+  - `ToDo:` one .txt file per poem
+  - `ToDo:` create PoemTemplate to use for individual poems
 
-- ToDo: RandomCalculations.js
+- `ToDo:` RandomCalculations.js
 
-- ToDo: ImageViewer.js
-  - ToDo: image directory
+- `ToDo:` ImageViewer.js
+  - `ToDo:` image directory
 
-- ToDo: NameTaker.js
-  - ToDo: prompt for name
-  - ToDo: print: so, your name is 'x'. why don't I believe you
+- `ToDo:` NameTaker.js
+  - `ToDo:` prompt for name
+  - `ToDo:` print: so, your name is 'x'. why don't I believe you
 
 ## Directory Structure
-- ToDo: update to WebView directory structure
+- `ToDo:` update to WebView directory structure
 
 ```
 chaos_machine/
