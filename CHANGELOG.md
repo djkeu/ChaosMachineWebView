@@ -8,7 +8,7 @@ More information about how this format at the bottom of the file.
 ## [0.5.2] - 2025-05-07
 ### Added.
 - ColorDarkBlue module.
-- ColorDarkBlue module.
+- ColorDarkRed module.
 
 ### Changed
 - Resizing darkred square.
