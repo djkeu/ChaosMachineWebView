@@ -41,6 +41,7 @@ More information about how this format at the bottom of the file.
 # Changelog Description
 All notable changes to this project will be documented in this file.
 
+MAJOR.MINOR.PATCH
 The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
