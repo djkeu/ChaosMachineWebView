@@ -14,10 +14,11 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 ## ToDo
 ### Vulnerabilities
+- `FixMe:` ./shared/randomPercentager.js (script in index.html)
+
 - `Done:` MainActivity.java:
   - webSettings.setJavaScriptEnabled(true);
   - `Note:` fix needed if using external sources for texts, images
-- `FixMe:` ./shared/randomPercentager.js (script in index.html)
 
 ### Interface
 - `ToDo:` ChaosMachine.js
