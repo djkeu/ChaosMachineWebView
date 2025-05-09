@@ -6,10 +6,8 @@ More information about how this format at the bottom of the file.
 ---
 
 ## [0.5.3] - 2025-05-09
-### Added.
-
-### Changed
-- Fixed vulnerability setJavaScriptEnabled in MainActivity.java
+### Fixed
+- Vulnerability setJavaScriptEnabled in MainActivity.java
 
 ---
 
