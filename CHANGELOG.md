@@ -5,6 +5,12 @@ More information about how this format at the bottom of the file.
 
 ---
 
+## [0.5.5] - 2025-05-09
+### Changed
+- Randomize position, fontsize in ColorDarkBlue.js
+
+---
+
 ## [0.5.4] - 2025-05-09
 ### Fixed
 - Vulnerability global randomPercentager.js
