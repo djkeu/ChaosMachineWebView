@@ -37,7 +37,7 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 - `FixMe:` delays in ShowProgress should match percentages: test
 
 #### New modules
-- `ToDo: ` ColorDarkGreen.js
+- `Done:` ColorDarkGreen.js
 
 - `ToDo:` continue.js
   - Counter to default (100 - 0)
