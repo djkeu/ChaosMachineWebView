@@ -18,7 +18,6 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 ## Interface
 - `ToDo:` ChaosMachine.js
   - delays module headers
-
 - `ToDo:` style app title (Chaos Machine)
 
 - `Done:` Start button to start the machine
@@ -28,7 +27,6 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 ## Modules
 ### General
 - `FixMe:` ModuleTemplate.js is not accurate
-
 - `FixMe:` delays in HaikuModules
 - `FixMe:` delays in ShowProgress should match percentages: test
 
