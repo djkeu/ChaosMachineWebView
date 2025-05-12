@@ -1,5 +1,14 @@
-function getRandomPercentage(min, max) {
-  return `${min + Math.random() * (max - min)}%`;
+// File: js/core/shared/randomPercentager.js
+
+// 1. Namespace protection (ADD THIS FIRST)
+if (window.ChaosMachineUtils && window.ChaosMachineUtils.getRandomPercentage) {
+    throw new Error("ChaosMachineUtils conflict detected");
 }
-// Expose to global scope
-window.getRandomPercentage = getRandomPercentage;
+
+// 2. Namespace initialization
+window.ChaosMachineUtils = window.ChaosMachineUtils || {};
+
+// 3. Function definition
+ChaosMachineUtils.getRandomPercentage = function(min, max) {
+    return `${min + Math.random() * (max - min)}%`;
+};
