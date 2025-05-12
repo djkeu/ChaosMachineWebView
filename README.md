@@ -37,6 +37,8 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 - `FixMe:` delays in ShowProgress should match percentages: test
 
 #### New modules
+- `ToDo: ` ColorDarkGreen.js
+
 - `ToDo:` continue.js
   - Counter to default (100 - 0)
   - Continue (y/n)
@@ -66,19 +68,30 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 
 ## Directory Structure
-- `ToDo:` update to WebView directory structure
+- Updated 2025-05-12
 
 ```
-chaos_machine/
-├── web/
+ChaosMachineWebView/
+├── assets/
 │   ├── css/
 │   │   └── styles.css
+│   ├── fonts/
+│   │   ├── RobotoMono-Bold.ttf
+│   │   ├── RobotoMono-Bold.woff2
+│   │   ├── RobotoMono-Regular.ttf
+│   │   └── RobotoMono-Regular.woff2
 │   ├── js/
 │   │   ├── core/
 │   │   │   ├── modules/
+│   │   │   │   ├── colors/
+│   │   │   │   │   ├── ColorDarkBlue.js
+│   │   │   │   │   ├── ColorDarkOrange.js
+│   │   │   │   │   └── ColorDarkRed.js
 │   │   │   │   ├── poetry/
 │   │   │   │   │   ├── HaikuElastiek.js
 │   │   │   │   │   └── HaikuMat.js
+│   │   │   │   ├── shared/
+│   │   │   │   ├── └── randomPercentager.js
 │   │   │   │   ├── tools/
 │   │   │   │   ├── └── ShowProgress.js
 │   │   │   │   └── ModuleTemplate.js
@@ -86,5 +99,6 @@ chaos_machine/
 │   │   └── app.js
 │   └── index.html
 ├── .gitignore
+├── CHANGELOG.md
 └── README.md
 ```
