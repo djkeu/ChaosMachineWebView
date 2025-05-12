@@ -14,7 +14,8 @@ class ChaosApp {
             new HaikuMat(),
             new ShowProgress(),
             new ColorDarkBlue(),
-            new ColorDarkRed()
+            new ColorDarkRed(),
+            new ColorDarkOrange()
             ]
                 .forEach(m => this.machine.registerModule(m));
 
