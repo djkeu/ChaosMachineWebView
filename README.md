@@ -6,21 +6,23 @@ See for current version number:
 - changelog.md
 - app/build.gradle
 
+
 ## Description
 Chaos Machine is an art project that spews out random output taken from texts, scripts, sounds and images. User interaction is coming. Randomness is not chaos. Chaos is not madness.
 
 Android: Java / WebView / JavaScript 
 Prototype written in Python, switched to JavaScript for compatibility with WebView / mobile apps
 
-## ToDo
-### Vulnerabilities
+
+## Vulnerabilities
 - `Done:` ./shared/randomPercentager.js (script in index.html)
   - `Done:` moved randomPercentager to ./modules/shared/
 - `Done:` MainActivity.java:
   - webSettings.setJavaScriptEnabled(true);
   - `Note:` fix needed if using external sources for texts, images
 
-### Interface
+
+## Interface
 - `ToDo:` ChaosMachine.js
   - delays module headers
 
@@ -29,17 +31,16 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 - `Done:` Start button to start the machine
 - `Done:` Stop button to stop the machine
 
-### Modules
-#### General
+
+## Modules
+### General
 - `FixMe:` ModuleTemplate.js is not accurate
 
 - `FixMe:` delays in HaikuModules
 - `FixMe:` delays in ShowProgress should match percentages: test
 
-#### New modules
-- `Done:` ColorDarkGreen.js
-
-- `ToDo:` continue.js
+### New modules
+- `ToDo:` ContinueCountdown.js
   - Counter to default (100 - 0)
   - Continue (y/n)
   - Y: Continuing counter
@@ -65,6 +66,18 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 - `ToDo:` NameTaker.js
   - `ToDo:` prompt for name
   - `ToDo:` print: so, your name is 'x'. why don't I believe you
+
+### Existing modules
+- colors
+  - ColorDarkBlue.js
+  - ColorDarkGreen.js
+  - ColorDarkOrange.js
+  - ColorDarkRed.js
+- poetry
+  - HaikuElastiek.js
+  - HaikuMat.js
+- tools
+  - ShowProgress.js
 
 
 ## Directory Structure
