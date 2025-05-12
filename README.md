@@ -1,12 +1,5 @@
 # Chaos Machine
 
-## Version number
-MAJOR.MINOR.PATCH (SemVer) 
-See for current version number:
-- changelog.md
-- app/build.gradle
-
-
 ## Description
 Chaos Machine is an art project that spews out random output taken from texts, scripts, sounds and images. User interaction is coming. Randomness is not chaos. Chaos is not madness.
 
@@ -115,3 +108,10 @@ ChaosMachineWebView/
 ├── CHANGELOG.md
 └── README.md
 ```
+
+
+## Version number
+MAJOR.MINOR.PATCH (SemVer)
+See for current version number:
+- changelog.md
+- app/build.gradle
