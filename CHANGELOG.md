@@ -5,6 +5,12 @@ More information about how this format at the bottom of the file.
 
 ---
 
+## [0.5.4] - 2025-05-09
+### Fixed
+- Vulnerability global randomPercentager.js
+
+---
+
 ## [0.5.3] - 2025-05-09
 ### Fixed
 - Vulnerability setJavaScriptEnabled in MainActivity.java
