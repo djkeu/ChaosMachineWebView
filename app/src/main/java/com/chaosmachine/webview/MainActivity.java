@@ -3,7 +3,6 @@ package com.chaosmachine.webview;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.net.http.SslError;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.CookieManager;
@@ -18,7 +17,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
@@ -26,9 +24,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.webkit.WebViewAssetLoader;
 import androidx.webkit.WebViewAssetLoader.AssetsPathHandler;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setDomStorageEnabled(true);
 
         // Disable potentially dangerous features
-        webSettings.setAllowFileAccess(false); // Changed to false for better security
+        webSettings.setAllowFileAccess(false);
         webSettings.setAllowFileAccessFromFileURLs(false);
         webSettings.setAllowUniversalAccessFromFileURLs(false);
         webSettings.setAllowContentAccess(false);
@@ -58,14 +53,11 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setDatabaseEnabled(false);
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
-        // Disable saving form data and passwords
+        // Disable saving form data
         webSettings.setSaveFormData(false);
-        webSettings.setSavePassword(false);
 
         // Disable mixed content (HTTP content in HTTPS pages)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
-        }
+        webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
 
         // Configure safer cookies
         CookieManager cookieManager = CookieManager.getInstance();
@@ -82,13 +74,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Enhanced WebViewClient with additional security controls
         webView.setWebViewClient(new WebViewClient() {
-            // For Android < 7.0 (API 24)
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 return handleUrlLoading(url);
             }
 
-            // For Android 7.0+ (API 24+)
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 return handleUrlLoading(request.getUrl().toString());
@@ -104,21 +94,15 @@ public class MainActivity extends AppCompatActivity {
                 return true; // Block all other URLs
             }
 
-            // Intercept requests to load from assets securely
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
                 return assetLoader.shouldInterceptRequest(request.getUrl());
             }
 
-            // Handle SSL errors - fail closed for security
             @Override
             public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
                 Log.e("WEBVIEW_SECURITY", "SSL Error: " + error.getPrimaryError());
                 handler.cancel(); // Fail closed - don't proceed on SSL errors
-
-                // Optionally show an error message to the user
-                // Toast.makeText(MainActivity.this, "Security error: unable to establish secure connection", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -127,15 +111,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("WEBVIEW_TEST", "Page loaded: " + url);
 
                 // Inject CSP header for additional XSS protection
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                    view.evaluateJavascript(
-                            "var cspMeta = document.createElement('meta');" +
-                                    "cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');" +
-                                    "cspMeta.setAttribute('content', \"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\");" +
-                                    "document.head.appendChild(cspMeta);",
-                            null
-                    );
-                }
+                view.evaluateJavascript(
+                        "var cspMeta = document.createElement('meta');" +
+                                "cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');" +
+                                "cspMeta.setAttribute('content', \"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';\");" +
+                                "document.head.appendChild(cspMeta);",
+                        null
+                );
             }
         });
 
@@ -171,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
      * JavaScript interface that provides a bridge between JavaScript and Android code.
      * All methods that should be accessible from JavaScript must use the @JavascriptInterface annotation.
      */
-    private class WebAppInterface {
+    private static class WebAppInterface {
         @JavascriptInterface
         public void performAction(String data) {
             // Validate input before processing
