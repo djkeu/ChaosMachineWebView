@@ -1,8 +1,6 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-More information about how this format at the bottom of the file.
-
 ---
 
 ## [0.5.7] - 2025-05-12
