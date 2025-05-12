@@ -5,7 +5,7 @@ More information about how this format at the bottom of the file.
 
 ---
 
-## [0.6.0] - 2025-05-09
+## [0.5.6] - 2025-05-09
 ### Added
 - ColorDarkOrange.js
 
