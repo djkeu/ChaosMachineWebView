@@ -48,12 +48,6 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
   - x + y: personal, public, private, professional
   - add time for third dimension
 
-- `ToDo:` ShowColorBlock.js
-  - `ToDo:` display block of random color
-    - Note: text file with color names?
-  - `ToDo:` display name/code of color in block in white/black letters
-  - `ToDo:` animation
-
 - `ToDo:` RandomClock.js
 
 - `ToDo:` PoemReader.js
