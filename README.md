@@ -14,8 +14,8 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 ## ToDo
 ### Vulnerabilities
-- `FixMe:` ./shared/randomPercentager.js (script in index.html)
-
+- `Done:` ./shared/randomPercentager.js (script in index.html)
+  - `Done:` moved randomPercentager to ./modules/shared/
 - `Done:` MainActivity.java:
   - webSettings.setJavaScriptEnabled(true);
   - `Note:` fix needed if using external sources for texts, images
@@ -30,10 +30,18 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 - `Done:` Stop button to stop the machine
 
 ### Modules
-- `Note:` ModuleTemplate.js is not accurate
+#### General
+- `FixMe:` ModuleTemplate.js is not accurate
 
 - `FixMe:` delays in HaikuModules
 - `FixMe:` delays in ShowProgress should match percentages: test
+
+#### New modules
+- `ToDo:` continue.js
+  - Counter to default (100 - 0)
+  - Continue (y/n)
+  - Y: Continuing counter
+  - N: skip rest of module
 
 - `ToDo:` BartModule.js
   - graph -> square
