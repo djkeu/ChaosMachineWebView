@@ -2,40 +2,42 @@ class ColorDarkBlue {
     constructor() {
         this.name = 'color_dark_blue';
         this.shouldStop = false;
-        this.redSquare = null;
+        this.blueSquare = null;
         this.cleanup = null;
     }
 
     async execute(machine) {
         this.shouldStop = false;
+        // Use the utility from the namespace
+        const randomTopPosition = ChaosMachineUtils.getRandomPercentage(20, 50);
+        const randomLeftPosition = ChaosMachineUtils.getRandomPercentage(30, 50);
+        const randomFontSize = ChaosMachineUtils.getRandomPercentage(100, 250);
 
         try {
             // Create red square
-            this.redSquare = document.createElement('div');
-            this.redSquare.style.position = 'fixed';
-            this.redSquare.style.top = '20%';
-            this.redSquare.style.left = '30%';
-            this.redSquare.style.transform = 'translate(-50%, -50%)';
-            this.redSquare.style.width = '200px';
-            this.redSquare.style.height = '200px';
-            this.redSquare.style.backgroundColor = 'darkblue';
-
-            this.redSquare.textContent = "dark blue";
-            // this.redSquare.style.color = "white";  // Make text visible
-            this.redSquare.style.fontSize = "200%";
-            this.redSquare.style.display = "flex";
-            this.redSquare.style.alignItems = "center";
-            this.redSquare.style.justifyContent = "center";
-            this.redSquare.style.fontWeight = "bold";
+            this.blueSquare = document.createElement('div');
+            this.blueSquare.style.position = 'fixed';
+            this.blueSquare.style.top = randomTopPosition;
+            this.blueSquare.style.left = randomLeftPosition;
+            this.blueSquare.style.transform = 'translate(-50%, -50%)';
+            this.blueSquare.style.width = '6em';
+            this.blueSquare.style.height = '5.5em';
+            this.blueSquare.style.backgroundColor = 'darkblue';
+            this.blueSquare.textContent = "dark blue";
+            this.blueSquare.style.fontSize = randomFontSize;
+            this.blueSquare.style.display = "flex";
+            this.blueSquare.style.alignItems = "center";
+            this.blueSquare.style.justifyContent = "center";
+            this.blueSquare.style.fontWeight = "bold";
 
             // Add to output
-            machine.output.appendChild(this.redSquare);
+            machine.output.appendChild(this.blueSquare);
 
             // Setup cleanup function
             this.cleanup = () => {
-                if (this.redSquare && this.redSquare.parentNode) {
-                    this.redSquare.parentNode.removeChild(this.redSquare);
-                    this.redSquare = null;
+                if (this.blueSquare && this.blueSquare.parentNode) {
+                    this.blueSquare.parentNode.removeChild(this.blueSquare);
+                    this.blueSquare = null;
                 }
             };
 
@@ -45,18 +47,16 @@ class ColorDarkBlue {
                     this.cleanup();
                     resolve();
                 }, 3000);
-
                 this.stopSignal = () => {
                     clearTimeout(timeout);
                     this.cleanup();
                     resolve();
                 };
             });
-
         } catch (e) {
             if (this.cleanup) this.cleanup();
             if (e.name !== 'AbortError') {
-                console.error("Error in ColorDarkRed:", e);
+                console.error("Error in ColorDarkBlue:", e);
             }
         }
     }
@@ -66,4 +66,5 @@ class ColorDarkBlue {
         if (this.stopSignal) this.stopSignal();
     }
 }
+
 window.ModuleName = ColorDarkBlue;
