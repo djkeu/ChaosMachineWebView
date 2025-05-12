@@ -1,62 +1,62 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+
 ---
 
-## [0.5.7] - 2025-05-12
+## [0.6.0] - 2025-05-12
 ### Added
+- ColorDarkOrange.js
 - ColorDarkGreen.js
 
 ---
 
-## [0.5.6] - 2025-05-12
-### Added
-- ColorDarkOrange.js
-
----
-
-## [0.5.5] - 2025-05-09
-### Changed
-- Randomize position, fontsize in ColorDarkBlue.js
-
----
-
-## [0.5.4] - 2025-05-09
+## [0.5.1] - 2025-05-09
 ### Fixed
+- Vulnerability setJavaScriptEnabled in MainActivity.java
 - Vulnerability global randomPercentager.js
 
 ---
 
-## [0.5.3] - 2025-05-09
-### Fixed
-- Vulnerability setJavaScriptEnabled in MainActivity.java
+## [0.5.0] - 2025-05-09
+### Changed
+- randomPercentager.js:
+    - Randomize position, fontSizes in color modules
 
 ---
 
-## [0.5.2] - 2025-05-07
+## [0.4.1] - 2025-05-07
 ### Added.
-- ColorDarkBlue module.
-- ColorDarkRed module.
+- Modules category: Colors
+- ColorDarkBlue.js
+- ColorDarkRed.js
 
 ### Changed
-- Width, height darkred square.
-- Position top, left of darkred square.
+- Width, height darkRed square.
+- Position top, left of darkRed square.
 
 ---
 
 ## [0.3.0] - 2025-05-01
 ### Added
-- HaikuElastiek module.
-- HaikuMat module.
-- ShowProgress module.
+- Modules category: Tools
+- ShowProgress.js
+
+---
+
+## [0.2.0] - 2025-05-01
+### Added
+- Modules category: Poetry
+- HaikuElastiek.js
+- HaikuMat.js
 
 ---
 
 ## [0.1.0] - 2025-04-xx
 - First beta release.
 
-
 ---
+
 
 # Changelog Description
 All notable changes to this project will be documented in this file.
