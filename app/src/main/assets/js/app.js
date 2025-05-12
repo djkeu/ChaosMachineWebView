@@ -10,9 +10,14 @@ class ChaosApp {
 
             // Register modules
             [
+            // Poetry modules
             new HaikuElastiek(),
             new HaikuMat(),
+
+            // Tools modules
             new ShowProgress(),
+
+            // Color modules
             new ColorDarkBlue(),
             new ColorDarkGreen(),
             new ColorDarkOrange(),
