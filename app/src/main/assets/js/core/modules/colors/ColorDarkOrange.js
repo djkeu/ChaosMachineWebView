@@ -9,8 +9,8 @@ class ColorDarkOrange {
     async execute(machine) {
         this.shouldStop = false;
         // Use the utility from the namespace
-        const randomTopPosition = ChaosMachineUtils.getRandomPercentage(50, 20);
-        const randomLeftPosition = ChaosMachineUtils.getRandomPercentage(50, 30);
+        const randomTopPosition = ChaosMachineUtils.getRandomPercentage(20, 50);
+        const randomLeftPosition = ChaosMachineUtils.getRandomPercentage(50, 70);
         const randomFontSize = ChaosMachineUtils.getRandomPercentage(100, 250);
 
         try {
