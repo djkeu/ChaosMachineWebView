@@ -1,6 +1,4 @@
 # Changelog
-All notable changes to this project will be documented in this file.
-
 
 ---
 
@@ -69,7 +67,7 @@ All notable changes to this project will be documented in this file.
 ---
 
 
-# Changelog Description
+# About Changelog.md
 All notable changes to this project will be documented in this file.
 
 MAJOR.MINOR.PATCH
