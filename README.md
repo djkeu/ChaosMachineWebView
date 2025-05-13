@@ -4,26 +4,17 @@
 Chaos Machine is an art project that spews out random output taken from texts, scripts, sounds and images. User interaction is coming. Randomness is not chaos. Chaos is not madness.
 
 Android: Java / WebView / JavaScript 
-Prototype written in Python, switched to JavaScript for compatibility with WebView / mobile apps
-
-
-## Vulnerabilities
-- `Done:` ./shared/randomPercentager.js (script in index.html)
-  - `Done:` moved randomPercentager to ./modules/shared/
-- `Done:` MainActivity.java:
-  - webSettings.setJavaScriptEnabled(true);
-  - `Note:` fix needed if using external sources for texts, images
+Prototype written in Python, switched to JavaScript for compatibility with WebView / Android
 
 
 ## Interface
-- `Done:` Stop button to stop the machine
-  - `Done`: ChaosMachine.js: === chaos machine stopped === not showing
-  - `Done`: Modules
 - `ToDo:` style app title (Chaos Machine)
 
+- `Done`: ChaosMachine.js: 
+  - `Done:` === chaos machine stopped === not showing
+  - `Done`: Delays module headers
 - `Done:` Start button to start the machine
-- `Done:` ChaosMachine.js
-  - delays module headers
+- `Done:` Stop button to stop the machine
 
 
 ## Modules
@@ -48,8 +39,6 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
   - x + y: personal, public, private, professional
   - add time for third dimension
 
-- `ToDo:` RandomClock.js
-
 - `ToDo:` PoemReader.js
   - `ToDo:` read .txt file
   - `ToDo:` one .txt file per poem
@@ -57,12 +46,15 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 - `ToDo:` RandomCalculations.js
 
-- `ToDo:` ImageViewer.js
-  - `ToDo:` image directory
-
 - `ToDo:` NameTaker.js
   - `ToDo:` prompt for name
   - `ToDo:` print: so, your name is 'x'. why don't I believe you
+
+- `ToDo:` ImageViewer.js
+  - `ToDo:` image directory
+
+- `Abandoned:` RandomClock.js
+
 
 ### Existing modules
 - colors
@@ -119,3 +111,11 @@ MAJOR.MINOR.PATCH (SemVer)
 See for current version number:
 - changelog.md
 - app/build.gradle
+
+
+## Vulnerabilities
+- `Done:` ./shared/randomPercentager.js (script in index.html)
+  - `Done:` moved randomPercentager to ./modules/shared/
+- `Done:` MainActivity.java:
+  - webSettings.setJavaScriptEnabled(true);
+  - `Note:` fix needed if using external sources for texts, images
