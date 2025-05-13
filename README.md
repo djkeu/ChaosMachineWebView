@@ -16,9 +16,9 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 
 ## Interface
-- `FixMe:` Stop button to stop the machine
-  - `FixMe`: Modules not stopped immediately
-  - `FixMe`: ChaosMachine.js: === chaos machine stopped === not showing
+- `Done:` Stop button to stop the machine
+  - `Done`: ChaosMachine.js: === chaos machine stopped === not showing
+  - `Done`: Modules
 - `ToDo:` style app title (Chaos Machine)
 
 - `Done:` Start button to start the machine
@@ -28,6 +28,9 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 ## Modules
 ### General
+- `FixMe:` color modules:
+  - `FixMe:` clean stopping routine
+  - `ToDo:` delay before showing text
 - `FixMe:` ModuleTemplate.js is not accurate
 - `FixMe:` delays in HaikuModules
 - `FixMe:` delays in ShowProgress should match percentages: test
