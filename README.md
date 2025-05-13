@@ -28,12 +28,13 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 ## Modules
 ### General
+- `FixMe:` ShowProgress.js
+  - `FixMe:` delays in ShowProgress should match percentages
+  - `FixMe:` delays should be displayed before the display of progress
 - `FixMe:` color modules:
   - `FixMe:` clean stopping routine
   - `ToDo:` delay before showing text
 - `FixMe:` ModuleTemplate.js is not accurate
-- `FixMe:` delays in HaikuModules
-- `FixMe:` delays in ShowProgress should match percentages: test
 
 ### New modules
 - `ToDo:` ContinueCountdown.js

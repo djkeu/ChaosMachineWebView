@@ -12,7 +12,7 @@ class ShowProgress {
     const signal = this.abortController.signal;
 
     try {
-      await machine.display("\n--- Running show_progress ---\n\tShow progress:\n");
+      await machine.display("\n\tShow progress:\n\n");
       let percentage = 0;
 
       while (percentage < 100) {
@@ -20,7 +20,9 @@ class ShowProgress {
         if (!machine.isRunning || this.shouldStop || signal.aborted) break;
 
         percentage = Math.min(100, percentage + Math.random() * 15 + 3);
-        await machine.display(`\tProgress: ${Math.round(percentage)}%\n`);
+        if (percentage < 99.5) {
+          await machine.display(`\tProgress: ${Math.round(percentage)}%\n`);
+        }
 
         // Check again before delay
         if (!machine.isRunning || this.shouldStop || signal.aborted) break;
