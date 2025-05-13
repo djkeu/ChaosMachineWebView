@@ -102,5 +102,6 @@ class ChaosMachine {
     await this.bufferFlushPromise;
     await this.clearOutput();
     await this.display("\n=== CHAOS MACHINE STOPPED ===\n");
+    await this.delay(2000);
   }
 }

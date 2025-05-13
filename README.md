@@ -16,10 +16,12 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 
 ## Interface
+- `FixMe:` Stop button to stop the machine
+  - `FixMe`: Modules not stopped immediately
+  - `FixMe`: ChaosMachine.js: === chaos machine stopped === not showing
 - `ToDo:` style app title (Chaos Machine)
 
 - `Done:` Start button to start the machine
-- `Done:` Stop button to stop the machine
 - `Done:` ChaosMachine.js
   - delays module headers
 
