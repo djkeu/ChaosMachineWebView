@@ -16,12 +16,12 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 
 ## Interface
-- `ToDo:` ChaosMachine.js
-  - delays module headers
 - `ToDo:` style app title (Chaos Machine)
 
 - `Done:` Start button to start the machine
 - `Done:` Stop button to stop the machine
+- `Done:` ChaosMachine.js
+  - delays module headers
 
 
 ## Modules
