@@ -6,7 +6,12 @@ All notable changes to this project will be documented in this file.
 
 ## [0.6.1] - 2025-05-13
 ### Changed
-- ChaosMachine.js: delays module headers
+- ChaosMachine.js:
+  - delay === Chaos Machine Started ===
+  - delays module headers
+
+### Fixed
+- ChaosMachine.js: clean up stopping routine after Stop button is clicked
 
 ---
 
