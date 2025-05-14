@@ -8,6 +8,7 @@
   - wait before display of progress in loop
   - length wait matches percentage progress
   - total run module: 10 seconds
+- Style App title
 
 ---
 
