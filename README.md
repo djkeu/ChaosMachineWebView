@@ -10,23 +10,14 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 ## Interface
 - `ToDo:` style app title (Chaos Machine)
 
-- `Done`: ChaosMachine.js: 
-  - `Done:` === chaos machine stopped === not showing
-  - `Done`: Delays module headers
-- `Done:` Start button to start the machine
-- `Done:` Stop button to stop the machine
-
 
 ## Modules
 ### General
 - `FixMe:` color modules:
   - `FixMe:` clean stopping routine
   - `ToDo:` delay before showing text
-- `FixMe:` ModuleTemplate.js is not accurate
 
-- `Done:` ShowProgress.js
-  - `Done:` delays in ShowProgress should match percentages
-  - `Done:` delays should be displayed before the display of progress
+- `FixMe:` ModuleTemplate.js is not accurate
 
 ### New modules
 - `ToDo:` ContinueCountdown.js
@@ -55,7 +46,6 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
   - `ToDo:` image directory
 
 - `Abandoned:` RandomClock.js
-
 
 ### Existing modules
 - colors
