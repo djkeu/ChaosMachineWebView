@@ -2,6 +2,15 @@
 
 ---
 
+## [0.6.2] - 2025-05-14
+### Changed
+- ShowProgress.js:
+  - wait before display of progress in loop
+  - length wait matches percentage progress
+  - total run module: 10 seconds
+
+---
+
 ## [0.6.1] - 2025-05-13
 ### Changed
 - ChaosMachine.js:
