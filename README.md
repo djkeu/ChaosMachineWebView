@@ -8,14 +8,14 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 
 ## Modules
-### General
+### FixMe Modules
 - `FixMe:` color modules:
   - `FixMe:` clean stopping routine
-  - `ToDo:` delay before showing text
+  - `FixMe:` delay before showing text
 
 - `FixMe:` ModuleTemplate.js is not accurate
 
-### New modules
+### ToDo: New modules
 - `ToDo:` ContinueCountdown.js
   - Counter to default (100 - 0)
   - Continue (y/n)
@@ -43,7 +43,7 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 - `Abandoned:` RandomClock.js
 
-### Existing modules
+### Finished modules
 - colors
   - ColorDarkBlue.js
   - ColorDarkGreen.js
