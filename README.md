@@ -9,11 +9,12 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 ## Modules
 ### FixMe Modules
+- `FixMe:` ModuleTemplate.js is not accurate
+
 - `FixMe:` color modules:
   - `FixMe:` clean stopping routine
-  - `FixMe:` delay before showing text
-
-- `FixMe:` ModuleTemplate.js is not accurate
+  - `ToDo:` delay before name color appears
+  - `ToDo:` random colors
 
 ### ToDo: New modules
 - `ToDo:` ContinueCountdown.js
