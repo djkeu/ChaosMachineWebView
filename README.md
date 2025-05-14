@@ -8,7 +8,7 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 
 ## Interface
-- `ToDo:` style app title (Chaos Machine)
+- `Done:` style app title (Chaos Machine)
 
 
 ## Modules
