@@ -5,12 +5,12 @@ class ModuleName {
     constructor() {
       this.name = 'module_name';
       this.shouldStop = false;
-      this.abortController = null;
+      this.abortController = new AbortController();
     }
   
     async execute(machine) {
       this.shouldStop = false;
-      this.abortController = new AbortController();
+      this.abortController = new AbortController();  // reset abortController
       const signal = this.abortController.signal;
 // End: Module Container CodeBlock 1
 
@@ -38,7 +38,13 @@ class ModuleName {
   
     abort() {
       this.shouldStop = true;
-      if (this.abortController) this.abortController.abort();
+      if (this.abortController) {
+        try {
+          this.abortController.abort();
+        } catch (e) {
+          console.error(`Error aborting ${this.name}:`, e);
+        }
+      }
     }
   }
 
