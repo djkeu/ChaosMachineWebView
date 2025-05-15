@@ -14,6 +14,8 @@
   - relink index.html
   - adjust ColorDarkBlue.js to renamed getRandomNumber()
   - adjust ColorDarkRed.js
+  - adjust ColorDarkGreen.js
+  - adjust ColorDarkOrange.js
 
 ---
 
