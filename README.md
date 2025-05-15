@@ -9,7 +9,17 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 ## Modules
 ### FixMe Modules
-- `FixMe:` ModuleContainer.js is not accurate
+- `FixMe:` getRandomPercentager.js
+  - `Done:` rename to getRandomNumber.js
+  - `Done:` rename getRandomPercentage() to getRandomNumber()
+  - `Done:` relink index.html
+  - `Done:` relink ColorDarkBlue.js
+
+  - `FixMe:` relink ColorDarkGreen.js
+  - `FixMe:` relink ColorDarkOrange.js
+  - `FixMe:` relink ColorDarkRed.js
+
+- `Done:` ModuleContainer.js is not accurate
 
 - `FixMe:` color modules:
   - `FixMe:` clean stopping routine
