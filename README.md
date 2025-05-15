@@ -1,12 +1,5 @@
 # Chaos Machine
 
-## Description
-Chaos Machine is an art project that spews out random output taken from texts, scripts, sounds and images. User interaction is coming. Randomness is not chaos. Chaos is not madness.
-
-Android: Java / WebView / JavaScript 
-Prototype written in Python, switched to JavaScript for compatibility with WebView / Android
-
-
 ## Interface
 - `ToDo:` style app title (Chaos Machine)
 - `ToDo:` splash screen
@@ -85,6 +78,13 @@ ChaosMachineWebView/
 ├── CHANGELOG.md
 └── README.md
 ```
+
+
+## Description
+Chaos Machine is an art project that spews out random output taken from texts, scripts, sounds and images. User interaction is coming. Randomness is not chaos. Chaos is not madness.
+
+Android: Java / WebView / JavaScript 
+Prototype written in Python, switched to JavaScript for compatibility with WebView / Android
 
 
 ## Version number
