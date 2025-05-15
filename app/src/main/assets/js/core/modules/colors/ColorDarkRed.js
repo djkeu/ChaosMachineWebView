@@ -54,7 +54,7 @@ class ColorDarkRed {
       }
 
       if (e.name !== 'AbortError') {
-        console.error("Error in ColorDarkBlue:", e);
+        console.error("Error in ColorDarkRed:", e);
       }
     }
   }
