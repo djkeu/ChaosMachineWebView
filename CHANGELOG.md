@@ -11,8 +11,9 @@
 - GetRandomNumbers.js:
   - return number instead of percentage
   - rename file, function from GetRandomPercentager.js / getRandomPercentage()
-  - adjust ColorDarkBlue.js
-  - adjust index.html
+  - relink index.html
+  - adjust ColorDarkBlue.js to renamed getRandomNumber()
+  - adjust ColorDarkRed.js
 
 ---
 
