@@ -2,6 +2,20 @@
 
 ---
 
+## [0.6.3] - 2025-05-15
+### Fixed
+- ModuleContainer.js:
+  - Start/stop routine
+
+### Changed
+- GetRandomNumbers.js:
+  - return number instead of percentage
+  - rename file, function from GetRandomPercentager.js / getRandomPercentage()
+  - adjust ColorDarkBlue.js
+  - adjust index.html
+
+---
+
 ## [0.6.2] - 2025-05-14
 ### Changed
 - ShowProgress.js:
