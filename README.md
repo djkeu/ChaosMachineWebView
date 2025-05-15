@@ -8,12 +8,12 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 
 ## Modules
-### FixMe:
+### FixMe
 - `FixMe:` color modules:
   - `ToDo:` delay before name color appears
   - `ToDo:` random colors
 
-### ToDo:
+### ToDo
 - `ToDo:` ContinueCountdown.js
   - Counter to default (100 - 0)
   - Continue (y/n)
