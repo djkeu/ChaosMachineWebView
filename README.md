@@ -7,6 +7,12 @@ Android: Java / WebView / JavaScript
 Prototype written in Python, switched to JavaScript for compatibility with WebView / Android
 
 
+## Interface
+- `ToDo:` style app title (Chaos Machine)
+- `ToDo:` splash screen
+- `ToDo:` icons
+
+
 ## Modules
 ### FixMe
 - `FixMe:` color modules:
@@ -86,10 +92,6 @@ MAJOR.MINOR.PATCH (SemVer)
 See for current version number:
 - changelog.md
 - app/build.gradle
-
-
-## Interface
-- `Done:` style app title (Chaos Machine)
 
 
 ## Vulnerabilities
