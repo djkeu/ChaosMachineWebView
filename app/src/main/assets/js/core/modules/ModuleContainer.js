@@ -1,9 +1,9 @@
-// Begin: Template CodeBlock 1
-// ToDo: replace ModuleName
-// ToDo: replace this.name
+// Begin: Module Container CodeBlock 1
+// ToDo: rename: class ModuleName
+// ToDo: rename: this.name = 'module_name';
 class ModuleName {
     constructor() {
-      this.name = 'show_progress';
+      this.name = 'module_name';
       this.shouldStop = false;
       this.abortController = null;
     }
@@ -12,20 +12,20 @@ class ModuleName {
       this.shouldStop = false;
       this.abortController = new AbortController();
       const signal = this.abortController.signal;
-// End: Template CodeBlock 1
+// End: Module Container CodeBlock 1
 
-// ToDo: Begin Module code
+// Begin: Module Example
       try {
-        await machine.display("\n\tThis is a module template\n");
+        await machine.display("\n\tThis is a module example\n");
 
       } catch (e) {
         if (e.name !== 'AbortError') {
           console.error("Error:", e);
         }
       }
-// ToDo: End Module code
+// End: Module Example
 
-// Begin: Template CodeBlock 2
+// Begin: Module Container CodeBlock 2
     }  // end execute(machine)
 
     async chunkedDelay(totalMs, chunkMs, signal) {
@@ -41,6 +41,7 @@ class ModuleName {
       if (this.abortController) this.abortController.abort();
     }
   }
-// ToDo: replace ModuleName
+
+// ToDo: rename ModuleName
 window.ModuleName = ModuleName;
-// End: Template CodeBlock 2
+// End: Module Container CodeBlock 2
