@@ -10,8 +10,10 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 ## Modules
 ### FixMe
 - `FixMe:` color modules:
+  - `ToDo:` padding
   - `ToDo:` delay before name color appears
   - `ToDo:` random colors
+ 
 
 ### ToDo
 - `ToDo:` ContinueCountdown.js
