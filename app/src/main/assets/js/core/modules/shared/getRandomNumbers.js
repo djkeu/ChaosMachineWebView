@@ -1,4 +1,4 @@
-// File: js/core/shared/randomPercentager.js
+// File: js/core/shared/randomNumbers.js
 
 // 1. Namespace protection (ADD THIS FIRST)
 if (window.ChaosMachineUtils && window.ChaosMachineUtils.getRandomNumber) {
