@@ -8,25 +8,12 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 
 ## Modules
-### FixMe Modules
-- `FixMe:` getRandomPercentager.js
-  - `Done:` rename to getRandomNumber.js
-  - `Done:` rename getRandomPercentage() to getRandomNumber()
-  - `Done:` relink index.html
-  - `Done:` relink ColorDarkBlue.js
-  - `Done:` relink ColorDarkRed.js
-
-  - `FixMe:` relink ColorDarkGreen.js
-  - `FixMe:` relink ColorDarkOrange.js
-
-- `Done:` ModuleContainer.js is not accurate
-
+### FixMe:
 - `FixMe:` color modules:
-  - `FixMe:` clean stopping routine
   - `ToDo:` delay before name color appears
   - `ToDo:` random colors
 
-### ToDo: New modules
+### ToDo:
 - `ToDo:` ContinueCountdown.js
   - Counter to default (100 - 0)
   - Continue (y/n)
@@ -53,18 +40,6 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
   - `ToDo:` image directory
 
 - `Abandoned:` RandomClock.js
-
-### Finished modules
-- colors
-  - ColorDarkBlue.js
-  - ColorDarkGreen.js
-  - ColorDarkOrange.js
-  - ColorDarkRed.js
-- poetry
-  - HaikuElastiek.js
-  - HaikuMat.js
-- tools
-  - ShowProgress.js
 
 
 ## Directory Structure
