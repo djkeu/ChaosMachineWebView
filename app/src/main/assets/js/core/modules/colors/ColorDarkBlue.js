@@ -25,6 +25,7 @@ class ColorDarkBlue {
       this.blueSquare.style.transform = 'translate(-50%, -50%)';
       this.blueSquare.style.width = '6em';
       this.blueSquare.style.height = '5.5em';
+      this.blueSquare.style.color = var(--text-primary);
       this.blueSquare.style.backgroundColor = 'darkblue';
       this.blueSquare.textContent = "dark blue";
       this.blueSquare.style.fontSize = `${randomFontSize}%`;
@@ -32,6 +33,7 @@ class ColorDarkBlue {
       this.blueSquare.style.alignItems = "center";
       this.blueSquare.style.justifyContent = "center";
       this.blueSquare.style.fontWeight = "bold";
+
 
       // Add to document body instead of machine.output
       // This is key - we need to add to document.body to show a fixed position element

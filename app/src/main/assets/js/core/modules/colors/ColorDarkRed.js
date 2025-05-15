@@ -25,6 +25,7 @@ class ColorDarkRed {
       this.redSquare.style.transform = 'translate(-50%, -50%)';
       this.redSquare.style.width = '6em';
       this.redSquare.style.height = '5.5em';
+      this.redSquare.style.color = var(--text-primary);
       this.redSquare.style.backgroundColor = 'darkred';
       this.redSquare.textContent = "dark red";
       this.redSquare.style.fontSize = `${randomFontSize}%`;

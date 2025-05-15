@@ -25,6 +25,7 @@ class ColorDarkGreen {
       this.greenSquare.style.transform = 'translate(-50%, -50%)';
       this.greenSquare.style.width = '6em';
       this.greenSquare.style.height = '5.5em';
+      this.greenSquare.style.color = var(--text-primary);
       this.greenSquare.style.backgroundColor = 'darkgreen';
       this.greenSquare.textContent = "dark green";
       this.greenSquare.style.fontSize = `${randomFontSize}%`;

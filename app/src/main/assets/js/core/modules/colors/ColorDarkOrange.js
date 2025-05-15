@@ -26,6 +26,7 @@ class ColorDarkOrange {
       this.orangeSquare.style.transform = 'translate(-50%, -50%)';
       this.orangeSquare.style.width = '6em';
       this.orangeSquare.style.height = '5.5em';
+      this.orangeSquare.style.color = var(--text-primary);
       this.orangeSquare.style.backgroundColor = 'darkorange';
       this.orangeSquare.textContent = "dark orange";
       this.orangeSquare.style.fontSize = `${randomFontSize}%`;
