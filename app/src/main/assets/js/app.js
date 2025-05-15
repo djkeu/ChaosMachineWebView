@@ -24,8 +24,8 @@ class ChaosApp {
         /*
         new ColorDarkGreen(),
         new ColorDarkOrange(),
-        new ColorDarkRed()
         */
+        new ColorDarkRed()
       ]
         .forEach(m => this.machine.registerModule(m));
 

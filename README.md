@@ -14,10 +14,10 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
   - `Done:` rename getRandomPercentage() to getRandomNumber()
   - `Done:` relink index.html
   - `Done:` relink ColorDarkBlue.js
+  - `Done:` relink ColorDarkRed.js
 
   - `FixMe:` relink ColorDarkGreen.js
   - `FixMe:` relink ColorDarkOrange.js
-  - `FixMe:` relink ColorDarkRed.js
 
 - `Done:` ModuleContainer.js is not accurate
 
