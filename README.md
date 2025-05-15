@@ -1,11 +1,5 @@
 # Chaos Machine
 
-## Interface
-- `ToDo:` style app title (Chaos Machine)
-- `ToDo:` splash screen
-- `ToDo:` icons
-
-
 ## Modules
 ### FixMe
 - `FixMe:` color modules:
@@ -41,6 +35,12 @@
   - `ToDo:` image directory
 
 - `Abandoned:` RandomClock.js
+
+
+## Interface
+- `ToDo:` style app title (Chaos Machine)
+- `ToDo:` splash screen
+- `ToDo:` icons
 
 
 ## Directory Structure
