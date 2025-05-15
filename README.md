@@ -9,7 +9,7 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 ## Modules
 ### FixMe Modules
-- `FixMe:` ModuleTemplate.js is not accurate
+- `FixMe:` ModuleContainer.js is not accurate
 
 - `FixMe:` color modules:
   - `FixMe:` clean stopping routine
