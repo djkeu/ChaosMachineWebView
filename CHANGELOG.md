@@ -10,12 +10,11 @@
 ### Changed
 - GetRandomNumbers.js:
   - return number instead of percentage
-  - rename file, function from GetRandomPercentager.js / getRandomPercentage()
-  - relink index.html
-  - adjust ColorDarkBlue.js to renamed getRandomNumber()
-  - adjust ColorDarkRed.js
-  - adjust ColorDarkGreen.js
-  - adjust ColorDarkOrange.js
+  - rename to GetRandomNumbers.js
+  - getRandomPercentage() -> getRandomNumber()
+  - relink modules, index.html
+- Color modules:
+  - style
 
 ---
 
