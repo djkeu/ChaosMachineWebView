@@ -19,13 +19,13 @@ class ColorDarkBlue {
 
       // Create blue square - this is the visual element we want to display
       this.blueSquare = document.createElement('div');
-      this.blueSquare.style.position = 'fixed';
+      this.blueSquare.style.position = 'absolute';
       this.blueSquare.style.top = `${randomTopPosition}%`;
       this.blueSquare.style.left = `${randomLeftPosition}%`;
       this.blueSquare.style.transform = 'translate(-50%, -50%)';
       this.blueSquare.style.width = '6em';
       this.blueSquare.style.height = '5.5em';
-      this.blueSquare.style.color = var(--text-primary);
+      this.blueSquare.style.color = 'white';
       this.blueSquare.style.backgroundColor = 'darkblue';
       this.blueSquare.textContent = "dark blue";
       this.blueSquare.style.fontSize = `${randomFontSize}%`;

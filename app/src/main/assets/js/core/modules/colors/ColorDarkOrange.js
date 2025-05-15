@@ -20,13 +20,13 @@ class ColorDarkOrange {
 
       // Create red square
       this.orangeSquare = document.createElement('div');
-      this.orangeSquare.style.position = 'fixed';
+      this.orangeSquare.style.position = 'absolute';
       this.orangeSquare.style.top = `${randomTopPosition}%`;
       this.orangeSquare.style.left = `${randomLeftPosition}%`;
       this.orangeSquare.style.transform = 'translate(-50%, -50%)';
       this.orangeSquare.style.width = '6em';
       this.orangeSquare.style.height = '5.5em';
-      this.orangeSquare.style.color = var(--text-primary);
+      this.orangeSquare.style.color = 'white';
       this.orangeSquare.style.backgroundColor = 'darkorange';
       this.orangeSquare.textContent = "dark orange";
       this.orangeSquare.style.fontSize = `${randomFontSize}%`;

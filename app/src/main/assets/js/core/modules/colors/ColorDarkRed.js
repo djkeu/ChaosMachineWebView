@@ -19,13 +19,13 @@ class ColorDarkRed {
 
       // Create red square
       this.redSquare = document.createElement('div');
-      this.redSquare.style.position = 'fixed';
+      this.redSquare.style.position = 'absolute';
       this.redSquare.style.top = `${randomTopPosition}%`;
       this.redSquare.style.left = `${randomLeftPosition}%`;
       this.redSquare.style.transform = 'translate(-50%, -50%)';
       this.redSquare.style.width = '6em';
       this.redSquare.style.height = '5.5em';
-      this.redSquare.style.color = var(--text-primary);
+      this.redSquare.style.color = 'white';
       this.redSquare.style.backgroundColor = 'darkred';
       this.redSquare.textContent = "dark red";
       this.redSquare.style.fontSize = `${randomFontSize}%`;

@@ -19,13 +19,13 @@ class ColorDarkGreen {
 
       // Create red square
       this.greenSquare = document.createElement('div');
-      this.greenSquare.style.position = 'fixed';
+      this.greenSquare.style.position = 'absolute';
       this.greenSquare.style.top = `${randomTopPosition}%`;
       this.greenSquare.style.left = `${randomLeftPosition}%`;
       this.greenSquare.style.transform = 'translate(-50%, -50%)';
       this.greenSquare.style.width = '6em';
       this.greenSquare.style.height = '5.5em';
-      this.greenSquare.style.color = var(--text-primary);
+      this.greenSquare.style.color = 'white';
       this.greenSquare.style.backgroundColor = 'darkgreen';
       this.greenSquare.textContent = "dark green";
       this.greenSquare.style.fontSize = `${randomFontSize}%`;
