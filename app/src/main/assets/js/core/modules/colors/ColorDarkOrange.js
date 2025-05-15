@@ -31,9 +31,11 @@ class ColorDarkOrange {
       this.orangeSquare.textContent = "dark orange";
       this.orangeSquare.style.fontSize = `${randomFontSize}%`;
       this.orangeSquare.style.display = "flex";
+      this.orangeSquare.style.textAlign = 'center';
       this.orangeSquare.style.alignItems = "center";
       this.orangeSquare.style.justifyContent = "center";
       this.orangeSquare.style.fontWeight = "bold";
+      this.orangeSquare.style.zIndex = "10";
 
       // Add to output
       machine.output.appendChild(this.orangeSquare);

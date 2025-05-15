@@ -30,9 +30,11 @@ class ColorDarkRed {
       this.redSquare.textContent = "dark red";
       this.redSquare.style.fontSize = `${randomFontSize}%`;
       this.redSquare.style.display = "flex";
+      this.redSquare.style.textAlign = 'center';
       this.redSquare.style.alignItems = "center";
       this.redSquare.style.justifyContent = "center";
       this.redSquare.style.fontWeight = "bold";
+      this.redSquare.style.zIndex = "10";
 
       // Add to output
       machine.output.appendChild(this.redSquare);

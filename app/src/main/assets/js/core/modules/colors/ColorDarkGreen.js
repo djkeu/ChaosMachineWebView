@@ -30,9 +30,11 @@ class ColorDarkGreen {
       this.greenSquare.textContent = "dark green";
       this.greenSquare.style.fontSize = `${randomFontSize}%`;
       this.greenSquare.style.display = "flex";
+      this.greenSquare.style.textAlign = 'center';
       this.greenSquare.style.alignItems = "center";
       this.greenSquare.style.justifyContent = "center";
       this.greenSquare.style.fontWeight = "bold";
+      this.greenSquare.style.zIndex = "10";
 
       // Add to output
       machine.output.appendChild(this.greenSquare);

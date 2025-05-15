@@ -30,15 +30,15 @@ class ColorDarkBlue {
       this.blueSquare.textContent = "dark blue";
       this.blueSquare.style.fontSize = `${randomFontSize}%`;
       this.blueSquare.style.display = "flex";
+      this.blueSquare.style.textAlign = 'center';
       this.blueSquare.style.alignItems = "center";
       this.blueSquare.style.justifyContent = "center";
       this.blueSquare.style.fontWeight = "bold";
+      this.blueSquare.style.zIndex = "10";
 
 
-      // Add to document body instead of machine.output
-      // This is key - we need to add to document.body to show a fixed position element
+      // Add to output
       machine.output.appendChild(this.blueSquare)
-      // document.body.appendChild(this.blueSquare);
 
       // Wait for 3 seconds or until aborted using chunked delay
       await this.chunkedDelay(3000, 100, signal);
