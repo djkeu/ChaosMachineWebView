@@ -11,6 +11,7 @@ class ChaosApp {
       // Register modules
       [
         // Poetry modules
+        /*
         new HaikuElastiek(),
         new HaikuMat(),
 
@@ -18,10 +19,13 @@ class ChaosApp {
         new ShowProgress(),
 
         // Color modules
+        */
         new ColorDarkBlue(),
+        /*
         new ColorDarkGreen(),
         new ColorDarkOrange(),
         new ColorDarkRed()
+        */
       ]
         .forEach(m => this.machine.registerModule(m));
 
