@@ -2,6 +2,13 @@
 
 ---
 
+## [0.6.4] - 2025-05-16
+### Changed
+- ColorDarkBlue.js:
+  - delay before showing text in square
+
+---
+
 ## [0.6.3] - 2025-05-15
 ### Fixed
 - ModuleContainer.js:
