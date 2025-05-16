@@ -27,7 +27,7 @@ class ColorDarkBlue {
       this.blueSquare.style.height = '5.5em';
       this.blueSquare.style.color = 'white';
       this.blueSquare.style.backgroundColor = 'darkblue';
-      this.blueSquare.textContent = "dark blue";
+      //this.blueSquare.textContent = "dark blue";
       this.blueSquare.style.fontSize = `${randomFontSize}%`;
       this.blueSquare.style.display = "flex";
       this.blueSquare.style.textAlign = 'center';
@@ -41,7 +41,17 @@ class ColorDarkBlue {
       machine.output.appendChild(this.blueSquare)
 
       // Wait for 3 seconds or until aborted using chunked delay
-      await this.chunkedDelay(3000, 100, signal);
+      await this.chunkedDelay(2000, 100, signal);
+
+      // Create blue square - this is the visual element we want to display
+      this.blueSquare.textContent = "dark blue";
+
+
+      // Add to output
+      machine.output.appendChild(this.blueSquare)
+
+      // Wait for 3 seconds or until aborted using chunked delay
+      await this.chunkedDelay(2500, 100, signal);
 
       // Cleanup at the end of normal execution
       if (this.blueSquare && this.blueSquare.parentNode) {

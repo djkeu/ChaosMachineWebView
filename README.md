@@ -5,6 +5,10 @@
 - `FixMe:` color modules:
   - `ToDo:` padding
   - `ToDo:` delay before name color appears
+    - `Done:` DarkBlue
+    - `ToDo:` DarkGreen
+    - `ToDo:` DarkOrange
+    - `ToDo:` DarkRed
   - `ToDo:` random colors
  
 
