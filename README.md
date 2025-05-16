@@ -3,14 +3,14 @@
 
 ## VSCode
 
-Build app via VSCode terminal:
+Build app in terminal:
 
 ```
-./gradlew assembleDebug && adb install -r app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n com.chaosmachine.webview/.MainActivity
-
-./gradlew assembleDebug
-adb install -r app/build/outputs/apk/debug/app-debug.apk
-adb shell am start -n com.chaosmachine.webview/.MainActivity
+$ runapp
+```
+Added to ~/.bashrc:
+```
+alias runapp='set -e; ./gradlew assembleDebug && adb install -t -r app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n com.chaosmachine.webview/.MainActivity'
 ```
 
 
