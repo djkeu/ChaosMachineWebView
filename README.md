@@ -1,17 +1,18 @@
 # Chaos Machine
 
 
-## Gradle VSCode
+## VSCode
+
+Build app via VSCode terminal:
 
 ```
+./gradlew assembleDebug && adb install -r app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n com.chaosmachine.webview/.MainActivity
+
 ./gradlew assembleDebug
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 adb shell am start -n com.chaosmachine.webview/.MainActivity
-
-./gradlew assembleDebug && adb install -r app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n com.chaosmachine.webview/.MainActivity
-
-
 ```
+
 
 ## Modules
 ### FixMe
