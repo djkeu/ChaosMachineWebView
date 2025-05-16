@@ -3,14 +3,14 @@
 
 ## VSCode
 
-Build app in terminal:
+Build Chaos Machine app in terminal:
 
 ```
-$ runapp
+$ runchaos
 ```
 Added to ~/.bashrc:
 ```
-alias runapp='set -e; ./gradlew assembleDebug && adb install -t -r app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n com.chaosmachine.webview/.MainActivity'
+alias runchaos='set -e; ./gradlew assembleDebug && adb install -t -r app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n com.chaosmachine.webview/.MainActivity'
 ```
 
 
