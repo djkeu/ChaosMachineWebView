@@ -6,7 +6,9 @@
 ### Changed
 - Color modules:
   - add delay before display of color name in squares
-
+- ShowProgress:
+  - Delay 'Show progress:'
+  - Delay 'Progress 100%'
 ---
 
 ## [0.6.3] - 2025-05-15
