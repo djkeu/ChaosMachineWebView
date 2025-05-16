@@ -13,12 +13,12 @@ class ColorDarkOrange {
     const signal = this.abortController.signal;
 
     try {
-      // Use the utility from the namespace
+      // Get random numbers from ../shared/GetRandomNumbers.js
       const randomTopPosition = ChaosMachineUtils.getRandomNumber(20, 50);
       const randomLeftPosition = ChaosMachineUtils.getRandomNumber(50, 70);
       const randomFontSize = ChaosMachineUtils.getRandomNumber(100, 250);
 
-      // Create red square
+      // Create orange square
       this.orangeSquare = document.createElement('div');
       this.orangeSquare.style.position = 'absolute';
       this.orangeSquare.style.top = `${randomTopPosition}%`;
@@ -28,7 +28,7 @@ class ColorDarkOrange {
       this.orangeSquare.style.height = '5.5em';
       this.orangeSquare.style.color = 'white';
       this.orangeSquare.style.backgroundColor = 'darkorange';
-      this.orangeSquare.textContent = "dark orange";
+      // this.orangeSquare.textContent = "dark orange";
       this.orangeSquare.style.fontSize = `${randomFontSize}%`;
       this.orangeSquare.style.display = "flex";
       this.orangeSquare.style.textAlign = 'center';
@@ -37,11 +37,15 @@ class ColorDarkOrange {
       this.orangeSquare.style.fontWeight = "bold";
       this.orangeSquare.style.zIndex = "10";
 
-      // Add to output
+      // Add orangeSquare to output
       machine.output.appendChild(this.orangeSquare);
+      await this.chunkedDelay(2000, 100, signal);
 
-      // Wait for 3 seconds or until aborted using chunked delay
-      await this.chunkedDelay(3000, 100, signal);
+      // Add text to orangeSquare
+      this.orangeSquare.textContent = "dark orange";
+      machine.output.appendChild(this.orangeSquare);
+      await this.chunkedDelay(2500, 100, signal);
+
 
       // Cleanup at the end of normal execution
       if (this.orangeSquare && this.orangeSquare.parentNode) {

@@ -12,7 +12,7 @@ class ColorDarkRed {
     const signal = this.abortController.signal;
 
     try {
-      // Use the utility from the namespace
+      // Get random numbers from ../shared/GetRandomNumbers.js
       const randomTopPosition = ChaosMachineUtils.getRandomNumber(50, 80);
       const randomLeftPosition = ChaosMachineUtils.getRandomNumber(50, 70);
       const randomFontSize = ChaosMachineUtils.getRandomNumber(100, 250);
@@ -27,7 +27,7 @@ class ColorDarkRed {
       this.redSquare.style.height = '5.5em';
       this.redSquare.style.color = 'white';
       this.redSquare.style.backgroundColor = 'darkred';
-      this.redSquare.textContent = "dark red";
+      // this.redSquare.textContent = "dark red";
       this.redSquare.style.fontSize = `${randomFontSize}%`;
       this.redSquare.style.display = "flex";
       this.redSquare.style.textAlign = 'center';
@@ -36,12 +36,15 @@ class ColorDarkRed {
       this.redSquare.style.fontWeight = "bold";
       this.redSquare.style.zIndex = "10";
 
-      // Add to output
+      // Add redSquare to output
       machine.output.appendChild(this.redSquare);
+      await this.chunkedDelay(2000, 100, signal);
 
+      // Add text to redSquare
+      this.redSquare.textContent = "dark red";
+      machine.output.appendChild(this.redSquare);
+      await this.chunkedDelay(2500, 100, signal);
 
-      // Wait for 3 seconds or until aborted using chunked delay
-      await this.chunkedDelay(3000, 100, signal);
 
       // Cleanup at the end of normal execution
       if (this.redSquare && this.redSquare.parentNode) {
