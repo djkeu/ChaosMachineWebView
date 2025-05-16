@@ -17,6 +17,7 @@ class ShowProgress {
 
     try {
       await machine.display("\n\tShow progress:\n\n");
+      await this.chunkedDelay(1000, 100, signal);
       let percentage = 0;
 
       while (percentage < 100 && accumulatedTimeMs < totalRuntimeMs) {
@@ -44,7 +45,7 @@ class ShowProgress {
         await machine.display("\nProgress: 100%\n\n");
 
         try {
-          await this.chunkedDelay(1000, 200, signal);
+          await this.chunkedDelay(2000, 200, signal);
         } catch (e) {
           // Show 100% even if aborted
         }
