@@ -36,22 +36,15 @@ class ColorDarkBlue {
       this.blueSquare.style.fontWeight = "bold";
       this.blueSquare.style.zIndex = "10";
 
-
-      // Add to output
+      // Add blueSquare to output
       machine.output.appendChild(this.blueSquare)
-
-      // Wait for 3 seconds or until aborted using chunked delay
       await this.chunkedDelay(2000, 100, signal);
 
-      // Create blue square - this is the visual element we want to display
+      // Add text to blueSquare
       this.blueSquare.textContent = "dark blue";
-
-
-      // Add to output
       machine.output.appendChild(this.blueSquare)
-
-      // Wait for 3 seconds or until aborted using chunked delay
       await this.chunkedDelay(2500, 100, signal);
+
 
       // Cleanup at the end of normal execution
       if (this.blueSquare && this.blueSquare.parentNode) {

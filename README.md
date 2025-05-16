@@ -3,9 +3,17 @@
 ## Modules
 ### FixMe
 - `FixMe:` color modules:
-  - `ToDo:` padding
+  - `Abandoned:` padding
+
+  - `ToDo:` validate chunkDelays
+
   - `ToDo:` delay before name color appears
     - `Done:` DarkBlue
+    - `ToDo:` DarkGreen
+    - `ToDo:` DarkOrange
+    - `ToDo:` DarkRed
+  - `ToDo:` randomize delay/showtime
+    - `ToDo:` DarkBlue
     - `ToDo:` DarkGreen
     - `ToDo:` DarkOrange
     - `ToDo:` DarkRed
