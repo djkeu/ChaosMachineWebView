@@ -8,16 +8,16 @@ class ColorDarkBlue {
 
   async execute(machine) {
     this.shouldStop = false;
-    this.abortController = new AbortController();  // reset abortController
+    this.abortController = new AbortController();
     const signal = this.abortController.signal;
 
     try {
-      // Use the utility from the namespace for random positioning
+      // Get random numbers from ../shared/GetRandomNumbers.js
       const randomTopPosition = ChaosMachineUtils.getRandomNumber(20, 50);
       const randomLeftPosition = ChaosMachineUtils.getRandomNumber(30, 50);
       const randomFontSize = ChaosMachineUtils.getRandomNumber(100, 250);
 
-      // Create blue square - this is the visual element we want to display
+      // Create blue square
       this.blueSquare = document.createElement('div');
       this.blueSquare.style.position = 'absolute';
       this.blueSquare.style.top = `${randomTopPosition}%`;
@@ -37,12 +37,12 @@ class ColorDarkBlue {
       this.blueSquare.style.zIndex = "10";
 
       // Add blueSquare to output
-      machine.output.appendChild(this.blueSquare)
+      machine.output.appendChild(this.blueSquare);
       await this.chunkedDelay(2000, 100, signal);
 
       // Add text to blueSquare
       this.blueSquare.textContent = "dark blue";
-      machine.output.appendChild(this.blueSquare)
+      machine.output.appendChild(this.blueSquare);
       await this.chunkedDelay(2500, 100, signal);
 
 

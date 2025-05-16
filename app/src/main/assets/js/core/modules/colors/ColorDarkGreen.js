@@ -8,16 +8,16 @@ class ColorDarkGreen {
 
   async execute(machine) {
     this.shouldStop = false;
-    this.abortController = new AbortController();  // reset abortController
+    this.abortController = new AbortController();
     const signal = this.abortController.signal;
 
     try {
-      // Use the utility from the namespace
+      // Get random numbers from ../shared/GetRandomNumbers.js
       const randomTopPosition = ChaosMachineUtils.getRandomNumber(50, 80);
       const randomLeftPosition = ChaosMachineUtils.getRandomNumber(30, 50);
       const randomFontSize = ChaosMachineUtils.getRandomNumber(100, 250);
 
-      // Create red square
+      // Create green square
       this.greenSquare = document.createElement('div');
       this.greenSquare.style.position = 'absolute';
       this.greenSquare.style.top = `${randomTopPosition}%`;
@@ -27,7 +27,7 @@ class ColorDarkGreen {
       this.greenSquare.style.height = '5.5em';
       this.greenSquare.style.color = 'white';
       this.greenSquare.style.backgroundColor = 'darkgreen';
-      this.greenSquare.textContent = "dark green";
+      // this.greenSquare.textContent = "dark green";
       this.greenSquare.style.fontSize = `${randomFontSize}%`;
       this.greenSquare.style.display = "flex";
       this.greenSquare.style.textAlign = 'center';
@@ -36,11 +36,14 @@ class ColorDarkGreen {
       this.greenSquare.style.fontWeight = "bold";
       this.greenSquare.style.zIndex = "10";
 
-      // Add to output
+      // Add greenSquare to output
       machine.output.appendChild(this.greenSquare);
+      await this.chunkedDelay(2000, 100, signal);
 
-      // Wait for 3 seconds or until aborted using chunked delay
-      await this.chunkedDelay(3000, 100, signal);
+      // Add text to greenSquare
+      this.greenSquare.textContent = "dark green";
+      machine.output.appendChild(this.greenSquare);
+      await this.chunkedDelay(2500, 100, signal);
 
       // Cleanup at the end of normal execution
       if (this.greenSquare && this.greenSquare.parentNode) {
