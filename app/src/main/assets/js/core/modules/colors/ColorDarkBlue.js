@@ -27,7 +27,7 @@ class ColorDarkBlue {
       this.blueSquare.style.height = '5.5em';
       this.blueSquare.style.color = 'white';
       this.blueSquare.style.backgroundColor = 'darkblue';
-      //this.blueSquare.textContent = "dark blue";
+      // this.blueSquare.textContent = "dark blue";  // add text after delay
       this.blueSquare.style.fontSize = `${randomFontSize}%`;
       this.blueSquare.style.display = "flex";
       this.blueSquare.style.textAlign = 'center';
