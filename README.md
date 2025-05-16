@@ -4,10 +4,10 @@
 ## VSCode
 
 Build Chaos Machine app in terminal:
-
 ```
 $ runchaos
 ```
+
 Added to ~/.bashrc:
 ```
 alias runchaos='set -e; ./gradlew assembleDebug && adb install -t -r app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n com.chaosmachine.webview/.MainActivity'
