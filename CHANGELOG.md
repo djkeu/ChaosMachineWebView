@@ -4,8 +4,8 @@
 
 ## [0.6.4] - 2025-05-16
 ### Changed
-- ColorDarkBlue.js:
-  - delay before showing text in square
+- Color modules:
+  - add delay before display of color name in squares
 
 ---
 

@@ -21,11 +21,11 @@ adb shell am start -n com.chaosmachine.webview/.MainActivity
 
   - `ToDo:` validate chunkDelays
 
-  - `ToDo:` delay before name color appears
+  - `Done:` delay before name color appears
     - `Done:` DarkBlue
-    - `ToDo:` DarkGreen
-    - `ToDo:` DarkOrange
-    - `ToDo:` DarkRed
+    - `Done:` DarkGreen
+    - `Done:` DarkOrange
+    - `Done:` DarkRed
   - `ToDo:` randomize delay/showtime
     - `ToDo:` DarkBlue
     - `ToDo:` DarkGreen
