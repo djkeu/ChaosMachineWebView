@@ -4,7 +4,7 @@
 ## Interface
 - `ToDo:` icons
 - `ToDo:` splash screen
-- `ToDo:` style app title (Chaos Machine)
+- `Done:` style app title (Chaos Machine)
 
 
 ## Modules
