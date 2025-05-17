@@ -2,9 +2,9 @@
 
 
 ## Interface
-- `ToDo:` style app title (Chaos Machine)
-- `ToDo:` splash screen
 - `ToDo:` icons
+- `ToDo:` splash screen
+- `ToDo:` style app title (Chaos Machine)
 
 
 ## Modules
