@@ -1,17 +1,10 @@
 # Chaos Machine
 
 
-## VSCode
-
-Build Chaos Machine app in terminal:
-```
-$ runchaos
-```
-
-Added to ~/.bashrc:
-```
-alias runchaos='set -e; ./gradlew assembleDebug && adb install -t -r app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n com.chaosmachine.webview/.MainActivity'
-```
+## Interface
+- `ToDo:` style app title (Chaos Machine)
+- `ToDo:` splash screen
+- `ToDo:` icons
 
 
 ## Modules
@@ -61,12 +54,6 @@ alias runchaos='set -e; ./gradlew assembleDebug && adb install -t -r app/build/o
   - `ToDo:` image directory
 
 - `Abandoned:` RandomClock.js
-
-
-## Interface
-- `ToDo:` style app title (Chaos Machine)
-- `ToDo:` splash screen
-- `ToDo:` icons
 
 
 ## Directory Structure
@@ -126,3 +113,17 @@ See for current version number:
 - `Done:` MainActivity.java:
   - webSettings.setJavaScriptEnabled(true);
   - `Note:` fix needed if using external sources for texts, images
+
+
+## VSCode
+
+Build Chaos Machine app in terminal:
+```
+$ runchaos
+```
+
+Added to ~/.bashrc:
+```
+alias runchaos='set -e; ./gradlew assembleDebug && adb install -t -r app/build/outputs/apk/debug/app-debug.apk && adb shell am start -n com.chaosmachine.webview/.MainActivity'
+```
+
