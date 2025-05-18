@@ -2,9 +2,10 @@
 
 
 ## Interface
+- `ToDo:` style app title (Chaos Machine)
+  - margin top / padding top
 - `ToDo:` splash screen
 - `Done:` app icons
-- `Done:` style app title (Chaos Machine)
 
 
 ## Modules
