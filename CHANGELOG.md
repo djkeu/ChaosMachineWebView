@@ -2,6 +2,12 @@
 
 ---
 
+## [0.6.5] - 2025-05-18
+### Changed
+- New app icons
+
+---
+
 ## [0.6.4] - 2025-05-16
 ### Changed
 - Color modules:
@@ -9,6 +15,7 @@
 - ShowProgress.js:
   - Delay 'Show progress:'
   - Delay 'Progress 100%'
+
 ---
 
 ## [0.6.3] - 2025-05-15
