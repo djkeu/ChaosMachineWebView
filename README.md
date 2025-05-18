@@ -2,8 +2,8 @@
 
 
 ## Interface
-- `ToDo:` icons
 - `ToDo:` splash screen
+- `Done:` app icons
 - `Done:` style app title (Chaos Machine)
 
 
