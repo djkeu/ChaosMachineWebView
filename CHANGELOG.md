@@ -5,6 +5,7 @@
 ## [0.6.5] - 2025-05-18
 ### Changed
 - New app icons
+- margin top app title (Chaos Machine)
 
 ---
 
