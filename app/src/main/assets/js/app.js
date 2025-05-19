@@ -12,7 +12,7 @@ class ChaosApp {
       [
         // Poetry modules
         new HaikuElastiek(),
-        new HaikuMat(),
+        new HaikuBrokenPhone(),
 
         // Tools modules
         new ShowProgress(),

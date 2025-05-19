@@ -2,13 +2,20 @@
 
 
 ## Interface
-- `ToDo:` splash screen
 - `Done:` app icons
+  - `Done:` create app icon
+  - `Done:` round icons
+- `ToDo:` splash screen
 - `Done:` style app title (Chaos Machine)
 
 
 ## Modules
 ### FixMe
+- `ToDo:` English haikus
+  - `Done:` replaced haikuMat with haikuBrokenPhone
+  - `Fixme:` Fix or abandon: translate existing haikus
+  - `ToDo:` create english haikus
+  
 - `FixMe:` color modules:
   - `Abandoned:` padding
 

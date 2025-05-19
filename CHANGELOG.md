@@ -2,6 +2,12 @@
 
 ---
 
+## [0.6.6] - 2025-05-19
+### Changed
+- replace Dutch haiku HaikuMat with HaikuBrokenPhone 
+
+---
+
 ## [0.6.5] - 2025-05-18
 ### Changed
 - New app icons
