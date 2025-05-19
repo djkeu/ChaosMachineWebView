@@ -12,6 +12,7 @@
 ## Modules
 ### FixMe
 - `ToDo:` English haikus
+  - `Done:` replaced haikuMat with haikuBrokenPhone
   - `Fixme:` Fix or abandon: translate existing haikus
   - `ToDo:` create english haikus
   
