@@ -2,9 +2,9 @@
 
 
 ## Interface
-- `ToDo:` app icons
+- `Done:` app icons
   - `Done:` create app icon
-  - `ToDo:` round icons
+  - `Done:` round icons
 - `ToDo:` splash screen
 - `Done:` style app title (Chaos Machine)
 
