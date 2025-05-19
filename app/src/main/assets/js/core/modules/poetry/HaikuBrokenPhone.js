@@ -1,7 +1,7 @@
-// HaikuMat.js
-class HaikuMat {
+// HaikuBrokenPhone.js
+class HaikuBrokenPhone {
   constructor() {
-    this.name = 'haiku_mat';
+    this.name = 'haiku_broken_phone';
     this.shouldStop = false;
     this.abortController = new AbortController();
   }
@@ -12,9 +12,9 @@ class HaikuMat {
     const signal = this.abortController.signal;
 
     const lines = [
-      "\n\n\tmat in drie zetten",
-      "\n\n\tverslagen in drie zinnen",
-      "\n\n\tzinnen en zetten"
+      "\n\nyour phone is broken",
+      "\n\nyour mind left disconnected",
+      "\n\nhelp is underway"
     ];
 
     for (const line of lines) {
@@ -62,4 +62,4 @@ class HaikuMat {
     }
   }
 }
-window.HaikuMat = HaikuMat;
+window.HaikuBrokenPhone = HaikuBrokenPhone;
