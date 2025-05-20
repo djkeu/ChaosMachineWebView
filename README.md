@@ -5,7 +5,7 @@
 - `Done:` app icons
   - `Done:` create app icon
   - `Done:` round icons
-- `ToDo:` splash screen
+- `Abandoned:` splash screen
 - `Done:` style app title (Chaos Machine)
 
 
