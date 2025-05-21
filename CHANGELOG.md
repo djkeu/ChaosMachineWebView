@@ -2,9 +2,10 @@
 
 ---
 
-## [0.6.6] - 2025-05-19
+## [0.6.6] - 2025-05-21
 ### Changed
-- replace Dutch haiku HaikuMat with HaikuBrokenPhone 
+- replace Dutch haiku HaikuMat with HaikuBrokenPhone
+- replace HaikuElastiek with HaikuCodeDance
 
 ---
 
