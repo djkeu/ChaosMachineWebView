@@ -1,4 +1,5 @@
 // HaikuBrokenPhone.js
+
 class HaikuBrokenPhone {
   constructor() {
     this.name = 'haiku_broken_phone';
