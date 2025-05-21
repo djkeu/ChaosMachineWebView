@@ -1,7 +1,8 @@
-// HaikuElastiek.js
-class HaikuElastiek {
+// HaikuCodeDance.js
+
+class HaikuCodeDance {
   constructor() {
-    this.name = 'haiku_elastiek';
+    this.name = 'haiku_code_dance';
     this.shouldStop = false;
     this.abortController = new AbortController();
   }
@@ -12,9 +13,9 @@ class HaikuElastiek {
     const signal = this.abortController.signal;
 
     const lines = [
-      "\n\n\truim zittende broek",
-      "\n\n\tsokken zonder elastiek",
-      "\n\n\thet goede leven"
+      "\n\nbreak out of the loop",
+      "\n\nleave the engine running",
+      "\n\ncoding is dancing"
     ];
 
     for (const line of lines) {
@@ -57,9 +58,9 @@ class HaikuElastiek {
       try {
         this.abortController.abort();
       } catch (e) {
-        console.error("Error aborting HaikuElastiek:", e);
+        console.error("Error aborting HaikuCodeDance:", e);
       }
     }
   }
 }
-window.HaikuElastiek = HaikuElastiek;
+window.HaikuCodeDance = HaikuCodeDance;
