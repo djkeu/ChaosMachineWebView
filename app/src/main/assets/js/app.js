@@ -11,7 +11,7 @@ class ChaosApp {
       // Register modules
       [
         // Poetry modules
-        new HaikuElastiek(),
+        new HaikuCodeDance(),
         new HaikuBrokenPhone(),
 
         // Tools modules
