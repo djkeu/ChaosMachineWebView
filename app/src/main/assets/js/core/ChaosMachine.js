@@ -90,7 +90,7 @@ class ChaosMachine {
 
         if (!this.isRunning) break;
         await this.clearOutput();
-        await this.delay(2000);
+        await this.delay(500);
 
         // Only execute if we're still running
         if (!this.isRunning) break;
