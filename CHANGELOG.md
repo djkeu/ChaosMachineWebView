@@ -2,6 +2,14 @@
 
 ---
 
+## [0.6.7] - 2025-05-23
+### Changed
+- combine all Color modules into one module (ColorCmBackground.js)
+- click coloredSquare to change background Chaos Machine
+- style coloredSquare
+
+---
+
 ## [0.6.6] - 2025-05-21
 ### Changed
 - replace Dutch haiku HaikuMat with HaikuBrokenPhone
