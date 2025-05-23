@@ -9,20 +9,28 @@ class RandomColor {
 
   async loadColors() {
     try {
-      const response = await fetch('./colors.txt');
+      const response = await fetch('colors.txt');
       if (!response.ok) throw new Error('Failed to load colors');
       const text = await response.text();
       this.colors = text.split('\n')
                         .map(color => color.trim())
-                        .filter(color => color.length > 0);
+                        .filter(color => {
+                          // Keep the line if it's either:
+                          // 1. A valid CSS color name (we'll check this when used)
+                          // 2. A valid hex color (starts with # and has 3, 4, 6, or 8 hex digits)
+                          return color.length > 0 && 
+                                (/^#[0-9A-Fa-f]{3,8}$/.test(color) || 
+                                 /^[a-zA-Z]+$/.test(color));
+                        });
       
-      // If the file is empty or couldn't be loaded, use defaults
       if (this.colors.length === 0) {
-        this.colors = ['darkblue', 'darkgreen', 'darkorange', 'darkred'];
+        this.colors = ['darkblue', 'darkgreen', 'darkorange', 'darkred', '#006D5B'
+];
       }
     } catch (error) {
       console.error('Error loading colors, using defaults:', error);
-      this.colors = ['darkblue', 'darkgreen', 'darkorange', 'darkred'];
+      this.colors = ['darkblue', 'darkgreen', 'darkorange', 'darkred', '#006D5B'
+];
     }
   }
 
@@ -31,7 +39,6 @@ class RandomColor {
     this.abortController = new AbortController();
     const signal = this.abortController.signal;
 
-    // Load colors first and wait for completion
     await this.loadColors();
 
     try {
@@ -62,13 +69,12 @@ class RandomColor {
       // Make square clickable
       this.coloredSquare.style.cursor = "pointer";
       this.coloredSquare.addEventListener('click', () => {
-        console.log('Square clicked!');
+        document.documentElement.style.setProperty('--background', randomColor);        console.log(`Changed body color to ${randomColor}`);
       });
 
       machine.output.appendChild(this.coloredSquare);
       await this.chunkedDelay(2000, 100, signal);
 
-      // this.coloredSquare.textContent = randomColor; // Show the color name
       this.coloredSquare.textContent = 'Click me';
       await this.chunkedDelay(2500, 100, signal);
 
@@ -79,7 +85,6 @@ class RandomColor {
       }
 
     } catch (e) {
-      // Cleanup on error or abort
       if (this.coloredSquare && this.coloredSquare.parentNode) {
         this.coloredSquare.parentNode.removeChild(this.coloredSquare);
         this.coloredSquare = null;
