@@ -26,8 +26,8 @@ class RandomColor {
 
     try {
       // Get random positions and color
-      const randomTopPosition = ChaosMachineUtils.getRandomNumber(20, 50);
-      const randomLeftPosition = ChaosMachineUtils.getRandomNumber(30, 50);
+      const randomTopPosition = ChaosMachineUtils.getRandomNumber(20, 80);
+      const randomLeftPosition = ChaosMachineUtils.getRandomNumber(30, 70);
       const randomFontSize = ChaosMachineUtils.getRandomNumber(100, 250);
       const randomColor = this.colors[Math.floor(Math.random() * this.colors.length)];
 
