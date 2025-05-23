@@ -1,7 +1,14 @@
 # Chaos Machine
 
 
-## Interface
+## Description
+Chaos Machine gives meaning to your life. Chaos Machine spews out only the best output, taken from texts, scripts, sounds and images. User interaction has arrived. Randomness is not chaos. Chaos is not madness. 
+
+Android: Java / WebView / JavaScript 
+Prototype written in Python, switched to JavaScript for compatibility with WebView / Android
+
+
+## ToDo Interface
 - `Done:` app icons
   - `Done:` create app icon
   - `Done:` round icons
@@ -9,7 +16,7 @@
 - `Done:` style app title (Chaos Machine)
 
 
-## Modules
+## ToDo Modules
 ### FixMe
 - `FixMe:`
  
@@ -88,13 +95,6 @@ ChaosMachineWebView/
 ├── CHANGELOG.md
 └── README.md
 ```
-
-
-## Description
-Chaos Machine is an art project that spews out random output taken from texts, scripts, sounds and images. User interaction is coming. Randomness is not chaos. Chaos is not madness.
-
-Android: Java / WebView / JavaScript 
-Prototype written in Python, switched to JavaScript for compatibility with WebView / Android
 
 
 ## Version number
