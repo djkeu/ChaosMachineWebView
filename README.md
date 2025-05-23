@@ -11,56 +11,46 @@
 
 ## Modules
 ### FixMe
-- `ToDo:` English haikus
-  - `Done:` replaced haikuMat with haikuBrokenPhone
-  - `Fixme:` Fix or abandon: translate existing haikus
-  - `ToDo:` create english haikus
-  
-- `FixMe:` color modules:
-  - `Abandoned:` padding
-
-  - `ToDo:` validate chunkDelays
-
-  - `Done:` delay before name color appears
-    - `Done:` DarkBlue
-    - `Done:` DarkGreen
-    - `Done:` DarkOrange
-    - `Done:` DarkRed
-  - `ToDo:` randomize delay/showtime
-    - `ToDo:` DarkBlue
-    - `ToDo:` DarkGreen
-    - `ToDo:` DarkOrange
-    - `ToDo:` DarkRed
-  - `ToDo:` random colors
+- `FixMe:`
  
 
 ### ToDo
-- `ToDo:` ContinueCountdown.js
-  - Counter to default (100 - 0)
-  - Continue (y/n)
-  - Y: Continuing counter
-  - N: skip rest of module
-
-- `ToDo:` BartModule.js
-  - graph -> square
-  - x + y: personal, public, private, professional
-  - add time for third dimension
-
-- `ToDo:` PoemReader.js
-  - `ToDo:` read .txt file
-  - `ToDo:` one .txt file per poem
-  - `ToDo:` create PoemTemplate to use for individual poems
-
 - `ToDo:` RandomCalculations.js
 
 - `ToDo:` NameTaker.js
   - `ToDo:` prompt for name
   - `ToDo:` print: so, your name is 'x'. why don't I believe you
+    - `ToDo:` random lines
 
 - `ToDo:` ImageViewer.js
   - `ToDo:` image directory
 
+- `ToDo:` English haiku's
+  - `Done:` replace haikuMat with haikuBrokenPhone
+  - `Done:` replace haikuElastiek with haikuCodeDance
+  - `ToDo:` create english haiku's
+
+
+### Abandoned
 - `Abandoned:` RandomClock.js
+
+- `Abandoned:` PoemReader.js
+  - `ToDo:` read .txt file
+  - `ToDo:` one .txt file per poem
+  - `ToDo:` create PoemTemplate to use for individual poems
+
+- `Abandoned:` ContinueCountdown.js
+  - Counter to default (100 - 0)
+  - Continue (y/n)
+  - Y: Continuing counter
+  - N: skip rest of module
+
+- `Abandoned:` BartModule.js
+  - graph -> square
+  - x + y: personal, public, private, professional
+  - add time for third dimension
+
+
 
 
 ## Directory Structure
