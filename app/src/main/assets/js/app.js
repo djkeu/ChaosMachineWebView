@@ -24,7 +24,7 @@ class ChaosApp {
         new ColorDarkOrange(),
         new ColorDarkRed()
         */
-       new RandomColor()
+       new ColorChaosMachineBackground()
       ]
         .forEach(m => this.machine.registerModule(m));
 

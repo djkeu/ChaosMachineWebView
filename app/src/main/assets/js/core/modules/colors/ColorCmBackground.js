@@ -1,4 +1,4 @@
-class RandomColor {
+class ColorChaosMachineBackground {
   constructor() {
     this.name = 'color_background';
     this.shouldStop = false;
@@ -97,4 +97,4 @@ class RandomColor {
   }
 }
 
-window.ModuleName = RandomColor;
+window.ModuleName = ColorChaosMachineBackground;
