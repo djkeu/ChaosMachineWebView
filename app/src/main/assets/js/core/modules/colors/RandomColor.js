@@ -59,12 +59,17 @@ class RandomColor {
       this.coloredSquare.style.fontWeight = "bold";
       this.coloredSquare.style.zIndex = "10";
 
-      // Add coloredSquare to output
+      // Make square clickable
+      this.coloredSquare.style.cursor = "pointer";
+      this.coloredSquare.addEventListener('click', () => {
+        console.log('Square clicked!');
+      });
+
       machine.output.appendChild(this.coloredSquare);
       await this.chunkedDelay(2000, 100, signal);
 
-      // Add text to coloredSquare
-      this.coloredSquare.textContent = randomColor; // Show the color name
+      // this.coloredSquare.textContent = randomColor; // Show the color name
+      this.coloredSquare.textContent = 'Click me';
       await this.chunkedDelay(2500, 100, signal);
 
       // Cleanup at the end of normal execution
