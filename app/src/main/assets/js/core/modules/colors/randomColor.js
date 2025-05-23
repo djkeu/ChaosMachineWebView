@@ -1,9 +1,27 @@
-class ColorDarkBlue {
+class RandomColor {
   constructor() {
-    this.name = 'color_dark_blue';
+    this.name = 'random_colored_square';
     this.shouldStop = false;
-    this.blueSquare = null;
+    this.coloredSquare = null;
     this.abortController = new AbortController();
+    this.colors = [];
+  }
+
+  async loadColors() {
+    try {
+      const response = await fetch('colors.txt');
+      if (!response.ok) throw new Error('Failed to load colors');
+      const text = await response.text();
+      this.colors = text.split('\n').filter(color => color.trim());
+      
+      // If the file is empty or couldn't be loaded, use defaults
+      if (this.colors.length === 0) {
+        this.colors = ['darkblue', 'darkgreen', 'darkorange', 'darkred'];
+      }
+    } catch (error) {
+      console.error('Error loading colors, using defaults:', error);
+      this.colors = ['darkblue', 'darkgreen', 'darkorange', 'darkred'];
+    }
   }
 
   async execute(machine) {
@@ -12,55 +30,54 @@ class ColorDarkBlue {
     const signal = this.abortController.signal;
 
     try {
-      // Get random numbers from ../shared/GetRandomNumbers.js
       const randomTopPosition = ChaosMachineUtils.getRandomNumber(20, 50);
       const randomLeftPosition = ChaosMachineUtils.getRandomNumber(30, 50);
       const randomFontSize = ChaosMachineUtils.getRandomNumber(100, 250);
+      const randomColor = this.colors[ChaosMachineUtils.getRandomNumber(0, this.colors.length - 1)];
 
-      // Create blue square
-      this.blueSquare = document.createElement('div');
-      this.blueSquare.style.position = 'absolute';
-      this.blueSquare.style.top = `${randomTopPosition}%`;
-      this.blueSquare.style.left = `${randomLeftPosition}%`;
-      this.blueSquare.style.transform = 'translate(-50%, -50%)';
-      this.blueSquare.style.width = '6em';
-      this.blueSquare.style.height = '5.5em';
-      this.blueSquare.style.color = 'white';
-      this.blueSquare.style.backgroundColor = 'darkblue';
-      // this.blueSquare.textContent = "dark blue";  // add text after delay
-      this.blueSquare.style.fontSize = `${randomFontSize}%`;
-      this.blueSquare.style.display = "flex";
-      this.blueSquare.style.textAlign = 'center';
-      this.blueSquare.style.alignItems = "center";
-      this.blueSquare.style.justifyContent = "center";
-      this.blueSquare.style.fontWeight = "bold";
-      this.blueSquare.style.zIndex = "10";
+      // Create colored square
+      this.coloredSquare = document.createElement('div');
+      this.coloredSquare.style.position = 'absolute';
+      this.coloredSquare.style.top = `${randomTopPosition}%`;
+      this.coloredSquare.style.left = `${randomLeftPosition}%`;
+      this.coloredSquare.style.transform = 'translate(-50%, -50%)';
+      this.coloredSquare.style.width = '6em';
+      this.coloredSquare.style.height = '5.5em';
+      this.coloredSquare.style.color = 'white';
+      this.coloredSquare.style.backgroundColor = randomColor;
+      this.coloredSquare.style.fontSize = `${randomFontSize}%`;
+      this.coloredSquare.style.display = "flex";
+      this.coloredSquare.style.textAlign = 'center';
+      this.coloredSquare.style.alignItems = "center";
+      this.coloredSquare.style.justifyContent = "center";
+      this.coloredSquare.style.fontWeight = "bold";
+      this.coloredSquare.style.zIndex = "10";
 
-      // Add blueSquare to output
-      machine.output.appendChild(this.blueSquare);
+      // Add coloredSquare to output
+      machine.output.appendChild(this.coloredSquare);
       await this.chunkedDelay(2000, 100, signal);
 
-      // Add text to blueSquare
-      this.blueSquare.textContent = "dark blue";
-      machine.output.appendChild(this.blueSquare);
+      // Add text to coloredSquare
+      this.coloredSquare.textContent = "Click me";
+      machine.output.appendChild(this.coloredSquare);
       await this.chunkedDelay(2500, 100, signal);
 
 
       // Cleanup at the end of normal execution
-      if (this.blueSquare && this.blueSquare.parentNode) {
-        this.blueSquare.parentNode.removeChild(this.blueSquare);
-        this.blueSquare = null;
+      if (this.coloredSquare && this.coloredSquare.parentNode) {
+        this.coloredSquare.parentNode.removeChild(this.coloredSquare);
+        this.coloredSquare = null;
       }
 
     } catch (e) {
       // Cleanup on error or abort
-      if (this.blueSquare && this.blueSquare.parentNode) {
-        this.blueSquare.parentNode.removeChild(this.blueSquare);
-        this.blueSquare = null;
+      if (this.coloredSquare && this.coloredSquare.parentNode) {
+        this.coloredSquare.parentNode.removeChild(this.coloredSquare);
+        this.coloredSquare = null;
       }
 
       if (e.name !== 'AbortError') {
-        console.error("Error in ColorDarkBlue:", e);
+        console.error("Error in RandomColor:", e);
       }
     }
   }
@@ -87,4 +104,4 @@ class ColorDarkBlue {
   }
 }
 
-window.ModuleName = ColorDarkBlue;
+window.ModuleName = RandomColor;

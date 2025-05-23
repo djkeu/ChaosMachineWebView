@@ -18,10 +18,13 @@ class ChaosApp {
         new ShowProgress(),
 
         // Color modules
+        /*
         new ColorDarkBlue(),
         new ColorDarkGreen(),
         new ColorDarkOrange(),
         new ColorDarkRed()
+        */
+       new RandomColor()
       ]
         .forEach(m => this.machine.registerModule(m));
 
