@@ -1,0 +1,4 @@
+darkblue
+darkgreen
+darkorange
+darkred
