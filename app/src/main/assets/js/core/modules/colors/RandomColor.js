@@ -12,7 +12,7 @@ class RandomColor {
       'darkorange',
       'darkred',
       '#1E3A3A',  // Original Chaos Machine background
-      '#006D5B',  // Your custom teal color
+      // '#006D5B',  // Backgroundcolor Output element
       '#6A5ACD',  // slateblue
       '#4682B4',  // steelblue
       '#2E8B57'   // seagreen
