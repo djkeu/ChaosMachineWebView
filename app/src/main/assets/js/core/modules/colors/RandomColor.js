@@ -9,10 +9,12 @@ class RandomColor {
 
   async loadColors() {
     try {
-      const response = await fetch('colors.txt');
+      const response = await fetch('./colors.txt');
       if (!response.ok) throw new Error('Failed to load colors');
       const text = await response.text();
-      this.colors = text.split('\n').filter(color => color.trim());
+      this.colors = text.split('\n')
+                        .map(color => color.trim())
+                        .filter(color => color.length > 0);
       
       // If the file is empty or couldn't be loaded, use defaults
       if (this.colors.length === 0) {
@@ -29,11 +31,15 @@ class RandomColor {
     this.abortController = new AbortController();
     const signal = this.abortController.signal;
 
+    // Load colors first and wait for completion
+    await this.loadColors();
+
     try {
       const randomTopPosition = ChaosMachineUtils.getRandomNumber(20, 50);
       const randomLeftPosition = ChaosMachineUtils.getRandomNumber(30, 50);
       const randomFontSize = ChaosMachineUtils.getRandomNumber(100, 250);
-      const randomColor = this.colors[ChaosMachineUtils.getRandomNumber(0, this.colors.length - 1)];
+      const randomColorIndex = Math.floor(ChaosMachineUtils.getRandomNumber(0, this.colors.length));
+      const randomColor = this.colors[randomColorIndex];
 
       // Create colored square
       this.coloredSquare = document.createElement('div');
@@ -58,10 +64,8 @@ class RandomColor {
       await this.chunkedDelay(2000, 100, signal);
 
       // Add text to coloredSquare
-      this.coloredSquare.textContent = "Click me";
-      machine.output.appendChild(this.coloredSquare);
+      this.coloredSquare.textContent = randomColor; // Show the color name
       await this.chunkedDelay(2500, 100, signal);
-
 
       // Cleanup at the end of normal execution
       if (this.coloredSquare && this.coloredSquare.parentNode) {
