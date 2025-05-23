@@ -4,34 +4,19 @@ class RandomColor {
     this.shouldStop = false;
     this.coloredSquare = null;
     this.abortController = new AbortController();
-    this.colors = [];
-  }
 
-  async loadColors() {
-    try {
-      const response = await fetch('colors.txt');
-      if (!response.ok) throw new Error('Failed to load colors');
-      const text = await response.text();
-      this.colors = text.split('\n')
-                        .map(color => color.trim())
-                        .filter(color => {
-                          // Keep the line if it's either:
-                          // 1. A valid CSS color name (we'll check this when used)
-                          // 2. A valid hex color (starts with # and has 3, 4, 6, or 8 hex digits)
-                          return color.length > 0 && 
-                                (/^#[0-9A-Fa-f]{3,8}$/.test(color) || 
-                                 /^[a-zA-Z]+$/.test(color));
-                        });
-      
-      if (this.colors.length === 0) {
-        this.colors = ['darkblue', 'darkgreen', 'darkorange', 'darkred', '#006D5B'
-];
-      }
-    } catch (error) {
-      console.error('Error loading colors, using defaults:', error);
-      this.colors = ['darkblue', 'darkgreen', 'darkorange', 'darkred', '#006D5B'
-];
-    }
+    // Hardcoded color palette
+    this.colors = [
+      'darkblue',
+      'darkgreen',
+      'darkorange',
+      'darkred',
+      '#1E3A3A',  // Original Chaos Machine background
+      '#006D5B',  // Your custom teal color
+      '#6A5ACD',  // slateblue
+      '#4682B4',  // steelblue
+      '#2E8B57'   // seagreen
+    ];
   }
 
   async execute(machine) {
@@ -39,59 +24,57 @@ class RandomColor {
     this.abortController = new AbortController();
     const signal = this.abortController.signal;
 
-    await this.loadColors();
-
     try {
+      // Get random positions and color
       const randomTopPosition = ChaosMachineUtils.getRandomNumber(20, 50);
       const randomLeftPosition = ChaosMachineUtils.getRandomNumber(30, 50);
       const randomFontSize = ChaosMachineUtils.getRandomNumber(100, 250);
-      const randomColorIndex = Math.floor(ChaosMachineUtils.getRandomNumber(0, this.colors.length));
-      const randomColor = this.colors[randomColorIndex];
+      const randomColor = this.colors[Math.floor(Math.random() * this.colors.length)];
 
-      // Create colored square
+      // Create and style the square
       this.coloredSquare = document.createElement('div');
-      this.coloredSquare.style.position = 'absolute';
-      this.coloredSquare.style.top = `${randomTopPosition}%`;
-      this.coloredSquare.style.left = `${randomLeftPosition}%`;
-      this.coloredSquare.style.transform = 'translate(-50%, -50%)';
-      this.coloredSquare.style.width = '6em';
-      this.coloredSquare.style.height = '5.5em';
-      this.coloredSquare.style.color = 'white';
-      this.coloredSquare.style.backgroundColor = randomColor;
-      this.coloredSquare.style.fontSize = `${randomFontSize}%`;
-      this.coloredSquare.style.display = "flex";
-      this.coloredSquare.style.textAlign = 'center';
-      this.coloredSquare.style.alignItems = "center";
-      this.coloredSquare.style.justifyContent = "center";
-      this.coloredSquare.style.fontWeight = "bold";
-      this.coloredSquare.style.zIndex = "10";
-
-      // Make square clickable
-      this.coloredSquare.style.cursor = "pointer";
-      this.coloredSquare.addEventListener('click', () => {
-        document.documentElement.style.setProperty('--background', randomColor);        console.log(`Changed body color to ${randomColor}`);
+      Object.assign(this.coloredSquare.style, {
+        position: 'absolute',
+        top: `${randomTopPosition}%`,
+        left: `${randomLeftPosition}%`,
+        transform: 'translate(-50%, -50%)',
+        width: '6em',
+        height: '5.5em',
+        color: 'white',
+        backgroundColor: randomColor,
+        fontSize: `${randomFontSize}%`,
+        display: 'flex',
+        textAlign: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontWeight: 'bold',
+        zIndex: '10',
+        cursor: 'pointer'
       });
 
+      // Click handler changes body background
+      this.coloredSquare.addEventListener('click', () => {
+        document.body.style.backgroundColor = randomColor;
+        console.log(`Changed background to ${randomColor}`);
+      });
+
+      // Add to DOM and animate
       machine.output.appendChild(this.coloredSquare);
       await this.chunkedDelay(2000, 100, signal);
 
       this.coloredSquare.textContent = 'Click me';
       await this.chunkedDelay(2500, 100, signal);
 
-      // Cleanup at the end of normal execution
-      if (this.coloredSquare && this.coloredSquare.parentNode) {
+      // Cleanup
+      if (this.coloredSquare?.parentNode) {
         this.coloredSquare.parentNode.removeChild(this.coloredSquare);
-        this.coloredSquare = null;
       }
-
     } catch (e) {
-      if (this.coloredSquare && this.coloredSquare.parentNode) {
-        this.coloredSquare.parentNode.removeChild(this.coloredSquare);
-        this.coloredSquare = null;
-      }
-
       if (e.name !== 'AbortError') {
         console.error("Error in RandomColor:", e);
+      }
+      if (this.coloredSquare?.parentNode) {
+        this.coloredSquare.parentNode.removeChild(this.coloredSquare);
       }
     }
   }
@@ -108,13 +91,7 @@ class RandomColor {
 
   abort() {
     this.shouldStop = true;
-    if (this.abortController) {
-      try {
-        this.abortController.abort();
-      } catch (e) {
-        console.error(`Error aborting ${this.name}:`, e);
-      }
-    }
+    this.abortController?.abort();
   }
 }
 
