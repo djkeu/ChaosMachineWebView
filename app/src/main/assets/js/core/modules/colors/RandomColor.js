@@ -1,6 +1,6 @@
 class RandomColor {
   constructor() {
-    this.name = 'random_colored_square';
+    this.name = 'color_background';
     this.shouldStop = false;
     this.coloredSquare = null;
     this.abortController = new AbortController();
@@ -11,9 +11,8 @@ class RandomColor {
       'darkgreen',
       'darkorange',
       'darkred',
-      '#1E3A3A',  // Original Chaos Machine background
-      // '#006D5B',  // Backgroundcolor Output element
-      '#6A5ACD',  // slateblue
+      '#006D5B',  // Default Chaos Machine background
+      '#1E3A3A',  // Output element background color
       '#4682B4',  // steelblue
       '#2E8B57'   // seagreen
     ];
@@ -29,6 +28,7 @@ class RandomColor {
       const randomTopPosition = ChaosMachineUtils.getRandomNumber(20, 80);
       const randomLeftPosition = ChaosMachineUtils.getRandomNumber(30, 70);
       const randomFontSize = ChaosMachineUtils.getRandomNumber(100, 250);
+      const randomBorderRadius = ChaosMachineUtils.getRandomNumber(30,50);
       const randomColor = this.colors[Math.floor(Math.random() * this.colors.length)];
 
       // Create and style the square
@@ -38,6 +38,8 @@ class RandomColor {
         top: `${randomTopPosition}%`,
         left: `${randomLeftPosition}%`,
         transform: 'translate(-50%, -50%)',
+        border: '0.2em solid grey',
+        borderRadius: `${randomBorderRadius}%`,
         width: '6em',
         height: '5.5em',
         color: 'white',
@@ -60,10 +62,10 @@ class RandomColor {
 
       // Add to DOM and animate
       machine.output.appendChild(this.coloredSquare);
-      await this.chunkedDelay(2000, 100, signal);
+      await this.chunkedDelay(1000, 100, signal);
 
       this.coloredSquare.textContent = 'Click me';
-      await this.chunkedDelay(2500, 100, signal);
+      await this.chunkedDelay(3500, 100, signal);
 
       // Cleanup
       if (this.coloredSquare?.parentNode) {
