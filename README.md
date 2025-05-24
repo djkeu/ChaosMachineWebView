@@ -11,9 +11,10 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 
 ## ToDo Interface
-- `Done:` app icons
+- `Todo:` app icons
   - `Done:` create app icon
   - `Done:` round icons
+  - `ToDo:` fit text in round icons
 - `Abandoned:` splash screen
 - `Done:` style app title (Chaos Machine)
 
