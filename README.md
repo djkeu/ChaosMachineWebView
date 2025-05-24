@@ -2,12 +2,13 @@
 
 
 ## Description
-Click Me
-Click Me gives meaning to your life
 Chaos Machine gives meaning to your life. Chaos Machine spews out only the best output, taken from texts, scripts, sounds and images. User interaction has arrived. Randomness is not chaos. Chaos is not madness. 
 
 Android: Java / WebView / JavaScript 
 Prototype written in Python, switched to JavaScript for compatibility with WebView / Android
+
+### Alternative app title
+Click Me. Click Me gives meaning to your life...
 
 
 ## ToDo Interface
