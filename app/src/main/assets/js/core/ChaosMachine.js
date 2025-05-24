@@ -80,6 +80,7 @@ class ChaosMachine {
         }
 
         // Clear and show module header
+        /*
         if (!this.isRunning) break;
         await this.clearOutput();
         await this.delay(1000);
@@ -87,10 +88,11 @@ class ChaosMachine {
         if (!this.isRunning) break;
         await this.display(`--- Running ${module.name} ---`);
         await this.delay(2000);
+        */
 
         if (!this.isRunning) break;
         await this.clearOutput();
-        await this.delay(500);
+        await this.delay(1000);
 
         // Only execute if we're still running
         if (!this.isRunning) break;
