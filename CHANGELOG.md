@@ -6,6 +6,9 @@
 ### Fixed
 - show_progress.js: 99% always showing as last result of loop
 
+### Changed
+- ChaosMachine.js: comment out display of `--- Running ${module.name} ---`
+
 ---
 
 ## [0.6.7] - 2025-05-23
