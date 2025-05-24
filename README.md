@@ -20,8 +20,8 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 
 ## ToDo Modules
 ### FixMe
-- `FixMe:` show_progress.js
-  - `FixMe:` 99% always showing
+- `Done:` show_progress.js
+  - `Done:` 99% always showing
  
 
 ### ToDo

@@ -2,6 +2,12 @@
 
 ---
 
+## [0.6.8] - 2025-05-24
+### Fixed
+- show_progress.js: 99% always showing as last result of loop
+
+---
+
 ## [0.6.7] - 2025-05-23
 ### Changed
 - combine all Color modules into one module (ColorCmBackground.js)
