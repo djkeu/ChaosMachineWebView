@@ -2,15 +2,21 @@
 
 
 ## [0.6.9] - 2025-05-25
+### Added
+- create ./assets/js/core/shared folder
+
 ### Fixed
-- create ./shared/fileLoader.js to allow use of local .txt, .json and image files
+- create fileLoader.js to allow use of local .txt, .json and image files
 - ColorCmBackground.js: use colors.txt to load colors
+
+### Changed
+- move GetRandomNumbers.js to ./shared
 
 ---
 
 ## [0.6.8] - 2025-05-24
 ### Fixed
-- show_progress.js: 99% always showing as last result of loop
+- show_progress.js: prevent 99% from showing as last result of loop
 
 ### Changed
 - ChaosMachine.js: comment out display of `--- Running ${module.name} ---`
