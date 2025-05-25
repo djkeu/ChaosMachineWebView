@@ -26,6 +26,7 @@ import androidx.webkit.WebViewAssetLoader.AssetsPathHandler;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -175,29 +176,55 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Enhanced JavaScript interface with file loading capability
      */
-    private class WebAppInterface {
-        private MainActivity mActivity;
-
-        // Changed parameter type from Context to MainActivity
+    private static class WebAppInterface {
+        // Required for JavaScript interface asset loading
+        @SuppressWarnings({"unused", "FieldCanBeLocal"})
+        private final MainActivity mActivity;
         WebAppInterface(MainActivity activity) {
             this.mActivity = activity;
         }
 
+        /**
+         * Debugging interface for JavaScript communication
+         * @param data Message to log (truncated after 100 chars)
+         */
+        @SuppressWarnings("unused")
         @JavascriptInterface
         public void performAction(String data) {
-            if (data == null || data.isEmpty()) {
-                Log.e("WEBVIEW_SECURITY", "Invalid empty data passed to JS interface");
+            // Security checks
+            if (data == null || data.isEmpty() || data.length() > 1000) {
+                Log.e("WEBVIEW_SECURITY", "Invalid input");
                 return;
             }
-            Log.d("WEBVIEW_JS", "Data received from JavaScript: " + data);
+
+            // Log first 100 chars to prevent log flooding
+            String sanitized = data.length() > 100
+                    ? data.substring(0, 100) + "..."
+                    : data;
+            Log.d("WEBVIEW_JS", "Received: " + sanitized);
         }
 
+        /**
+         * Loads asset files from Android package
+         * @param path Asset-relative path (e.g., "js/config.json")
+         * @return File contents or empty string on error
+         */
+        @SuppressWarnings("unused")
         @JavascriptInterface
         public String loadAssetFile(String path) {
-            try (InputStream is = getAssets().open(path)) {
+            // Validate path
+            if (path == null || path.isEmpty() || path.contains("../")) {
+                Log.e("WEBVIEW_SECURITY", "Invalid path: " + path);
+                return "";
+            }
+
+            try (InputStream is = mActivity.getAssets().open(path)) {
                 byte[] buffer = new byte[is.available()];
-                is.read(buffer);
-                return new String(buffer);
+                int bytesRead = is.read(buffer);
+                if (bytesRead <= 0) return "";
+
+                return new String(buffer, StandardCharsets.UTF_8);
+
             } catch (IOException e) {
                 Log.e("WEBVIEW_FILE", "Error loading: " + path, e);
                 return "";
