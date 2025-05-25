@@ -11,6 +11,8 @@
 
 ### Changed
 - move GetRandomNumbers.js to js/core/shared
+- rename ColorCmBackground.js to changeBodyBgColor.js
+- rename class, button in changeBodyBgColor.js
 
 ---
 
