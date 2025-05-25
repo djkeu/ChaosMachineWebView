@@ -40,25 +40,15 @@ class ColorChaosMachineBackground {
 
       let randomTopPosition, randomLeftPosition, randomFontSize, randomBorderRadius;
 
-      if (utils && utils.getRandomNumber) {
-        // Use your existing utility
-        randomTopPosition = utils.getRandomNumber(20, 80);
-        randomLeftPosition = utils.getRandomNumber(30, 70);
-        randomFontSize = utils.getRandomNumber(50, 150);
-        randomBorderRadius = utils.getRandomNumber(30, 50);
-      } else {
-        // Fallback random number generation
-        console.warn('ChaosMachineUtils not found, using fallback random generation');
-        randomTopPosition = 20 + Math.random() * 60;
-        randomLeftPosition = 30 + Math.random() * 40;
-        randomFontSize = 50 + Math.random() * 100;
-        randomBorderRadius = 30 + Math.random() * 20;
-      }
+      randomTopPosition = utils.getRandomNumber(20, 80);
+      randomLeftPosition = utils.getRandomNumber(30, 70);
+      randomFontSize = utils.getRandomNumber(50, 150);
+      randomBorderRadius = utils.getRandomNumber(30, 50);
 
       const randomColor = this.colors[Math.floor(Math.random() * this.colors.length)];
       console.log(`Selected color: ${randomColor}`);
 
-      // Create and style the square (keeping all your custom styling)
+      // Create and style the square
       this.coloredSquare = document.createElement('div');
       Object.assign(this.coloredSquare.style, {
         position: 'absolute',
