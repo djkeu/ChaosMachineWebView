@@ -1,0 +1,8 @@
+darkblue
+darkgreen
+darkorange
+darkred
+#006D5B
+#1E3A3A
+#4682B4
+seagreen
