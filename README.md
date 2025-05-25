@@ -13,20 +13,11 @@ Click Me. Click Me gives meaning to your life...
 
 ## ToDo Interface
 - `Todo:` app icons
-  - `Done:` create app icon
-  - `Done:` round icons
   - `ToDo:` fit text in round icons
 - `Abandoned:` splash screen
-- `Done:` style app title (Chaos Machine)
 
 
 ## ToDo Modules
-### FixMe
-- `Done:` show_progress.js
-  - `Done:` 99% always showing
- 
-
-### ToDo
 - `ToDo:` RandomCalculations.js
 
 - `ToDo:` NameTaker.js
@@ -38,8 +29,6 @@ Click Me. Click Me gives meaning to your life...
   - `ToDo:` image directory
 
 - `ToDo:` English haiku's
-  - `Done:` replace haikuMat with haikuBrokenPhone
-  - `Done:` replace haikuElastiek with haikuCodeDance
   - `ToDo:` create english haiku's
 
 
