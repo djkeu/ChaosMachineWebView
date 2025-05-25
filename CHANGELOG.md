@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [0.6.9] - 2025-05-25
+### Fixed
+- create ./shared/fileLoader.js to allow use of local .txt, .json and image files
+- ColorCmBackground.js: use colors.txt to load colors
+
+---
+
 ## [0.6.8] - 2025-05-24
 ### Fixed
 - show_progress.js: 99% always showing as last result of loop
