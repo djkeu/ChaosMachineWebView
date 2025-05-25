@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [0.6.10] - 2025-05-25
+### Changed
+- rename ColorCmBackground.js to changeBodyBgColor.js
+- rename class, button in changeBodyBgColor.js
+
+---
+
 ## [0.6.9] - 2025-05-25
 ### Added
 - create js/core/shared folder
@@ -11,8 +18,6 @@
 
 ### Changed
 - move GetRandomNumbers.js to js/core/shared
-- rename ColorCmBackground.js to changeBodyBgColor.js
-- rename class, button in changeBodyBgColor.js
 
 ---
 
