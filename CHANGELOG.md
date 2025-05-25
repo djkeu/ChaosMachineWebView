@@ -3,14 +3,14 @@
 
 ## [0.6.9] - 2025-05-25
 ### Added
-- create ./assets/js/core/shared folder
+- create js/core/shared folder
 
 ### Fixed
 - create fileLoader.js to allow use of local .txt, .json and image files
 - ColorCmBackground.js: use colors.txt to load colors
 
 ### Changed
-- move GetRandomNumbers.js to ./shared
+- move GetRandomNumbers.js to js/core/shared
 
 ---
 
