@@ -1,8 +1,8 @@
-class ColorChaosMachineBackground {
+class ChangeBodyBgColor {
   constructor() {
     this.name = 'color_background';
     this.shouldStop = false;
-    this.coloredSquare = null;
+    this.colorChangeBtn = null;
     this.abortController = new AbortController();
     this.colors = []; // Will be loaded from file
   }
@@ -49,8 +49,8 @@ class ColorChaosMachineBackground {
       console.log(`Selected color: ${randomColor}`);
 
       // Create and style the square
-      this.coloredSquare = document.createElement('div');
-      Object.assign(this.coloredSquare.style, {
+      this.colorChangeBtn = document.createElement('div');
+      Object.assign(this.colorChangeBtn.style, {
         position: 'absolute',
         top: `${randomTopPosition}%`,
         left: `${randomLeftPosition}%`,
@@ -72,28 +72,28 @@ class ColorChaosMachineBackground {
       });
 
       // Click handler changes body background
-      this.coloredSquare.addEventListener('click', () => {
+      this.colorChangeBtn.addEventListener('click', () => {
         document.body.style.backgroundColor = randomColor;
         console.log(`Changed background to ${randomColor}`);
       });
 
       // Add to DOM and animate (with your custom timing)
-      machine.output.appendChild(this.coloredSquare);
+      machine.output.appendChild(this.colorChangeBtn);
       await this.chunkedDelay(1000, 100, signal);
 
-      this.coloredSquare.textContent = 'Click me';
+      this.colorChangeBtn.textContent = 'Click me';
       await this.chunkedDelay(3500, 100, signal);
 
       // Cleanup
-      if (this.coloredSquare?.parentNode) {
-        this.coloredSquare.parentNode.removeChild(this.coloredSquare);
+      if (this.colorChangeBtn?.parentNode) {
+        this.colorChangeBtn.parentNode.removeChild(this.colorChangeBtn);
       }
     } catch (e) {
       if (e.name !== 'AbortError') {
-        console.error("Error in ColorChaosMachineBackground:", e);
+        console.error("Error in ChangeBodyBgColor:", e);
       }
-      if (this.coloredSquare?.parentNode) {
-        this.coloredSquare.parentNode.removeChild(this.coloredSquare);
+      if (this.colorChangeBtn?.parentNode) {
+        this.colorChangeBtn.parentNode.removeChild(this.colorChangeBtn);
       }
     }
   }
@@ -114,4 +114,4 @@ class ColorChaosMachineBackground {
   }
 }
 
-window.ModuleName = ColorChaosMachineBackground;
+window.ModuleName = ChangeBodyBgColor;

@@ -18,7 +18,7 @@ class ChaosApp {
         new ShowProgress(),
 
         // Color
-        new ColorChaosMachineBackground()
+        new ChangeBodyBgColor()
       ]
         .forEach(m => this.machine.registerModule(m));
 
