@@ -3,6 +3,7 @@ package com.chaosmachine.webview;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.net.http.SslError;
+// import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.CookieManager;
@@ -25,6 +26,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.webkit.WebViewAssetLoader;
 import androidx.webkit.WebViewAssetLoader.AssetsPathHandler;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -41,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Configure WebSettings with secure defaults
         WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true); // Required for your modules
+        webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
 
-        // Disable potentially dangerous features
-        webSettings.setAllowFileAccess(false);
+        // File access settings
+        webSettings.setAllowFileAccess(true);
         webSettings.setAllowFileAccessFromFileURLs(false);
         webSettings.setAllowUniversalAccessFromFileURLs(false);
         webSettings.setAllowContentAccess(false);
@@ -53,26 +57,23 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setDatabaseEnabled(false);
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
-        // Disable saving form data
-        webSettings.setSaveFormData(false);
-
-        // Disable mixed content (HTTP content in HTTPS pages)
+        // Disable mixed content
         webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
 
-        // Configure safer cookies
+        // Configure cookies
         CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptCookie(true);
         cookieManager.setAcceptThirdPartyCookies(webView, false);
 
-        // Set up asset loader for safer local content loading
+        // Set up asset loader
         final WebViewAssetLoader assetLoader = new WebViewAssetLoader.Builder()
                 .addPathHandler("/assets/", new AssetsPathHandler(this))
                 .build();
 
-        // Add JavaScript interface for native communication if needed
-        webView.addJavascriptInterface(new WebAppInterface(), "Android");
+        // Add enhanced JavaScript interface
+        webView.addJavascriptInterface(new WebAppInterface(this), "Android");
 
-        // Enhanced WebViewClient with additional security controls
+        // Enhanced WebViewClient
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -85,24 +86,58 @@ public class MainActivity extends AppCompatActivity {
             }
 
             private boolean handleUrlLoading(String url) {
-                // Only allow HTTPS and properly structured local asset URLs
                 if (url.startsWith("https://") ||
-                        url.startsWith("https://appassets.androidplatform.net/assets/")) {
-                    return false; // Allow loading
+                        url.startsWith("https://appassets.androidplatform.net/assets/") ||
+                        url.startsWith("file:///android_asset/") ||
+                        isAllowedFileType(url)) {
+                    return false;
                 }
                 Log.d("WEBVIEW_SECURITY", "Blocked URL: " + url);
-                return true; // Block all other URLs
+                return true;
+            }
+
+            private boolean isAllowedFileType(String url) {
+                if (!url.startsWith("file://")) {
+                    return false;
+                }
+                String lowerUrl = url.toLowerCase();
+                return lowerUrl.endsWith(".txt") ||
+                        lowerUrl.endsWith(".json") ||
+                        lowerUrl.endsWith(".png") ||
+                        lowerUrl.endsWith(".jpg") ||
+                        lowerUrl.endsWith(".jpeg") ||
+                        lowerUrl.endsWith(".gif") ||
+                        lowerUrl.endsWith(".webp") ||
+                        lowerUrl.endsWith(".svg") ||
+                        lowerUrl.endsWith(".bmp") ||
+                        lowerUrl.contains("/android_asset/");
             }
 
             @Override
             public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
-                return assetLoader.shouldInterceptRequest(request.getUrl());
+                String url = request.getUrl().toString();
+
+                if (url.startsWith("file://") && !url.startsWith("file:///android_asset/")) {
+                    if (!isAllowedFileType(url)) {
+                        Log.w("WEBVIEW_SECURITY", "Blocked file access: " + url);
+                        return new WebResourceResponse("text/plain", "UTF-8",
+                                new java.io.ByteArrayInputStream("Access denied".getBytes()));
+                    }
+                    Log.d("WEBVIEW_FILE_ACCESS", "Allowing file access: " + url);
+                }
+
+                WebResourceResponse assetResponse = assetLoader.shouldInterceptRequest(request.getUrl());
+                if (assetResponse != null) {
+                    return assetResponse;
+                }
+
+                return super.shouldInterceptRequest(view, request);
             }
 
             @Override
             public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
                 Log.e("WEBVIEW_SECURITY", "SSL Error: " + error.getPrimaryError());
-                handler.cancel(); // Fail closed - don't proceed on SSL errors
+                handler.cancel();
             }
 
             @Override
@@ -110,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
                 super.onPageFinished(view, url);
                 Log.d("WEBVIEW_TEST", "Page loaded: " + url);
 
-                // Inject CSP header for additional XSS protection
                 view.evaluateJavascript(
                         "var cspMeta = document.createElement('meta');" +
                                 "cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');" +
@@ -121,25 +155,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Configure WebChromeClient with permission restrictions
+        // Configure WebChromeClient
         webView.setWebChromeClient(new WebChromeClient() {
-            @Override
-            public void onPermissionRequest(PermissionRequest request) {
-                // Deny all permission requests
-                request.deny();
-            }
 
             @Override
             public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
-                // Deny geolocation permission requests
                 callback.invoke(origin, false, false);
             }
         });
 
-        // Load local content securely through asset loader
-        // webView.loadUrl("https://appassets.androidplatform.net/assets/index.html");
-
-        // If you need to use direct file loading for legacy reasons (less secure)
+        // Load the initial URL
         webView.loadUrl("file:///android_asset/index.html");
 
         ViewCompat.setOnApplyWindowInsetsListener(webView, (v, insets) -> {
@@ -150,23 +175,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * JavaScript interface that provides a bridge between JavaScript and Android code.
-     * All methods that should be accessible from JavaScript must use the @JavascriptInterface annotation.
+     * Enhanced JavaScript interface with file loading capability
      */
-    private static class WebAppInterface {
+    private class WebAppInterface {
+        private MainActivity mActivity;
+
+        // Changed parameter type from Context to MainActivity
+        WebAppInterface(MainActivity activity) {
+            this.mActivity = activity;
+        }
+
         @JavascriptInterface
         public void performAction(String data) {
-            // Validate input before processing
             if (data == null || data.isEmpty()) {
                 Log.e("WEBVIEW_SECURITY", "Invalid empty data passed to JS interface");
                 return;
             }
-
-            // Process validated data
             Log.d("WEBVIEW_JS", "Data received from JavaScript: " + data);
+        }
 
-            // Handle the action securely
-            // ...
+        @JavascriptInterface
+        public String loadAssetFile(String path) {
+            try (InputStream is = getAssets().open(path)) {
+                byte[] buffer = new byte[is.available()];
+                is.read(buffer);
+                return new String(buffer);
+            } catch (IOException e) {
+                Log.e("WEBVIEW_FILE", "Error loading: " + path, e);
+                return "";
+            }
         }
     }
 }

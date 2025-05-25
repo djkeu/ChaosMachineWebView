@@ -4,18 +4,26 @@ class ColorChaosMachineBackground {
     this.shouldStop = false;
     this.coloredSquare = null;
     this.abortController = new AbortController();
+    this.colors = []; // Will be loaded from file
+  }
 
-    // Hardcoded color palette
-    this.colors = [
-      'darkblue',
-      'darkgreen',
-      'darkorange',
-      'darkred',
-      '#006D5B',  // Default Chaos Machine background
-      '#1E3A3A',  // Output element background color
-      '#4682B4',  // steelblue
-      '#2E8B57'   // seagreen
-    ];
+  async loadColors() {
+    try {
+      // Android interface loading
+      const colorsText = Android.loadAssetFile('js/core/modules/colors/colors.txt');
+
+      this.colors = colorsText.split('\n')
+        .map(color => color.trim())
+        .filter(color => color.length > 0 && (color.startsWith('#') || /^[a-zA-Z]+$/.test(color)));
+
+      if (this.colors.length === 0) throw new Error("No valid colors found");
+
+      console.log("Loaded colors successfully:", this.colors.length, "colors");
+
+    } catch (error) {
+      console.warn("Using fallback colors due to:", error.message);
+      this.colors = ['#FF0000', '#00FF00', '#0000FF']; // RGB fallback
+    }
   }
 
   async execute(machine) {
@@ -23,15 +31,34 @@ class ColorChaosMachineBackground {
     this.abortController = new AbortController();
     const signal = this.abortController.signal;
 
-    try {
-      // Get random positions and color
-      const randomTopPosition = ChaosMachineUtils.getRandomNumber(20, 80);
-      const randomLeftPosition = ChaosMachineUtils.getRandomNumber(30, 70);
-      const randomFontSize = ChaosMachineUtils.getRandomNumber(50, 150);
-      const randomBorderRadius = ChaosMachineUtils.getRandomNumber(30,50);
-      const randomColor = this.colors[Math.floor(Math.random() * this.colors.length)];
+    // Load colors first
+    await this.loadColors();
 
-      // Create and style the square
+    try {
+      // Check if ChaosMachineUtils exists, otherwise use fallback
+      const utils = window.ChaosMachineUtils || window.ChaosMachine?.utils;
+
+      let randomTopPosition, randomLeftPosition, randomFontSize, randomBorderRadius;
+
+      if (utils && utils.getRandomNumber) {
+        // Use your existing utility
+        randomTopPosition = utils.getRandomNumber(20, 80);
+        randomLeftPosition = utils.getRandomNumber(30, 70);
+        randomFontSize = utils.getRandomNumber(50, 150);
+        randomBorderRadius = utils.getRandomNumber(30, 50);
+      } else {
+        // Fallback random number generation
+        console.warn('ChaosMachineUtils not found, using fallback random generation');
+        randomTopPosition = 20 + Math.random() * 60;
+        randomLeftPosition = 30 + Math.random() * 40;
+        randomFontSize = 50 + Math.random() * 100;
+        randomBorderRadius = 30 + Math.random() * 20;
+      }
+
+      const randomColor = this.colors[Math.floor(Math.random() * this.colors.length)];
+      console.log(`Selected color: ${randomColor}`);
+
+      // Create and style the square (keeping all your custom styling)
       this.coloredSquare = document.createElement('div');
       Object.assign(this.coloredSquare.style, {
         position: 'absolute',
@@ -60,7 +87,7 @@ class ColorChaosMachineBackground {
         console.log(`Changed background to ${randomColor}`);
       });
 
-      // Add to DOM and animate
+      // Add to DOM and animate (with your custom timing)
       machine.output.appendChild(this.coloredSquare);
       await this.chunkedDelay(1000, 100, signal);
 
@@ -73,7 +100,7 @@ class ColorChaosMachineBackground {
       }
     } catch (e) {
       if (e.name !== 'AbortError') {
-        console.error("Error in RandomColor:", e);
+        console.error("Error in ColorChaosMachineBackground:", e);
       }
       if (this.coloredSquare?.parentNode) {
         this.coloredSquare.parentNode.removeChild(this.coloredSquare);
