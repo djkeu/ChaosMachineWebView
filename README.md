@@ -18,6 +18,13 @@ Click Me. Click Me gives meaning to your life...
 
 
 ## ToDo Modules
+- `ToDo:` LevelUp.js
+  - `Todo:` get level from file
+  - `ToDo:` show level
+  - `ToDo:` increment level
+  - `ToDo:` show new level
+  - `ToDo:` store level
+
 - `ToDo:` RandomCalculations.js
 
 - `ToDo:` NameTaker.js
