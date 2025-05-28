@@ -25,6 +25,10 @@ Click Me. Click Me gives meaning to your life...
   - `ToDo:` show new level
   - `ToDo:` store level
 
+- `ToDo:` KeyFinder.js
+  - `ToDo:` display message about the key
+
+
 - `ToDo:` RandomCalculations.js
 
 - `ToDo:` NameTaker.js
