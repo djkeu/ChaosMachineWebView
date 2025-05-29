@@ -18,6 +18,11 @@ Click Me. Click Me gives meaning to your life...
 
 
 ## ToDo Modules
+
+- ToDo: login.js
+  - ToDo: login
+  - ToDo: logout 
+
 - `ToDo:` LevelUp.js
   - `Todo:` get level from file
   - `ToDo:` show level
