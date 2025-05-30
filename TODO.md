@@ -4,14 +4,14 @@ This is the Chaos Machine todo file
 
 
 ## FixMe
-- [ ] Update this ToDo section
 - [ ] Update Done section from git commits
 
 
 ## In Progress
-- [ ] Sound
-  - [x] Sound on physical device (phone)
-  - [ ] Sound on physical device (phone)
+- [ ] Update FixMe section
+- [ ] Update ToDo section
+- [ ] Update Abandoned section
+- [ ] Update Done section
 
 
 ## ToDo
@@ -20,9 +20,9 @@ This is the Chaos Machine todo file
 - [ ] app icons
   - [ ] fit text in round icons
 - [ ] Menu button
-  - [] About Chaos Machine
+  - [ ] About Chaos Machine
   - [ ] What's new
-  - [-] Dark theme
+  - [x] Dark theme
 
 ### Modules
 - [ ] login.js
@@ -49,24 +49,21 @@ This is the Chaos Machine todo file
   - [ ] create PoemTemplate to use for individual poems
 
 
-
 ## Abandoned
 - [-] splash screen
 - [ ] RandomClock.js
-
 - [ ] ContinueCountdown.js
-  - Counter to default (100 - 0)
-  - Continue (y/n)
-  - Y: Continuing counter
-  - N: skip rest of module
-
+  - [ ] Counter to default (100 - 0)
+  - [ ] Continue (y/n)
+  - [ ] Y: Continuing counter
+  - [ ] N: skip rest of module
 - [ ] BartModule.js
-  - graph -> square
-  - x + y: personal, public, private, professional
-  - add time for third dimension
+  - [ ] graph -> square
+  - [ ] x + y: personal, public, private, professional
+  - [ ] add time for third dimension
 
 
 ## Done
-- [] Update this section from git commits
-- [ ] English haiku's
-  - [ ] create english haiku's
+- [ ] Update this section from git commits
+- [x] English haiku's
+  - [x] create english haiku's
