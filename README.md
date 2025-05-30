@@ -11,62 +11,6 @@ Prototype written in Python, switched to JavaScript for compatibility with WebVi
 Click Me. Click Me gives meaning to your life...
 
 
-## ToDo Interface
-- `Todo:` app icons
-  - `ToDo:` fit text in round icons
-- `Abandoned:` splash screen
-
-
-## ToDo Modules
-
-- ToDo: login.js
-  - ToDo: login
-  - ToDo: logout 
-
-- `ToDo:` LevelUp.js
-  - `Todo:` get level from file
-  - `ToDo:` show level
-  - `ToDo:` increment level
-  - `ToDo:` show new level
-  - `ToDo:` store level
-
-- `ToDo:` KeyFinder.js
-  - `ToDo:` display message about the key
-
-
-- `ToDo:` RandomCalculations.js
-
-- `ToDo:` NameTaker.js
-  - `ToDo:` prompt for name
-  - `ToDo:` print: so, your name is 'x'. why don't I believe you
-    - `ToDo:` random lines
-
-- `ToDo:` ImageViewer.js
-  - `ToDo:` image directory
-
-- `ToDo:` English haiku's
-  - `ToDo:` create english haiku's
-
-
-### Abandoned
-- `Abandoned:` RandomClock.js
-
-- `Abandoned:` PoemReader.js
-  - `ToDo:` read .txt file
-  - `ToDo:` one .txt file per poem
-  - `ToDo:` create PoemTemplate to use for individual poems
-
-- `Abandoned:` ContinueCountdown.js
-  - Counter to default (100 - 0)
-  - Continue (y/n)
-  - Y: Continuing counter
-  - N: skip rest of module
-
-- `Abandoned:` BartModule.js
-  - graph -> square
-  - x + y: personal, public, private, professional
-  - add time for third dimension
-
 
 
 
