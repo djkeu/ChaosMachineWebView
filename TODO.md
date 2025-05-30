@@ -7,6 +7,7 @@ This is the Chaos Machine todo file
 - [ ] Update this ToDo section
 - [ ] Update Done section from git commits
 
+
 ## In Progress
 - [ ] Sound
   - [x] Sound on physical device (phone)
@@ -14,6 +15,7 @@ This is the Chaos Machine todo file
 
 
 ## ToDo
+
 ### Interface
 - [ ] app icons
   - [ ] fit text in round icons
@@ -21,49 +23,49 @@ This is the Chaos Machine todo file
   - [] About Chaos Machine
   - [ ] What's new
   - [-] Dark theme
+
 ### Modules
-- ToDo: login.js
-  - ToDo: login
-  - ToDo: logout
+- [ ] login.js
+  - [ ] login
+  - [ ] logout
 
-- `ToDo:` LevelUp.js
-  - `Todo:` get level from file
-  - `ToDo:` show level
-  - `ToDo:` increment level
-  - `ToDo:` show new level
-  - `ToDo:` store level
+- [ ] LevelUp.js
+  - [ ] get level from file
+  - [ ] show level
+  - [ ] increment level
+  - [ ] show new level
+  - [ ] store level
 
-- `ToDo:` KeyFinder.js
-  - `ToDo:` display message about the key
+- [ ] KeyFinder.js
+  - [ ] display message about the key
 
+- [ ] RandomCalculations.js
 
-- `ToDo:` RandomCalculations.js
+- [ ] NameTaker.js
+  - [ ] prompt for name
+  - [ ] print: so, your name is 'x'. why don't I believe you
+    - [ ] random lines
 
-- `ToDo:` NameTaker.js
-  - `ToDo:` prompt for name
-  - `ToDo:` print: so, your name is 'x'. why don't I believe you
-    - `ToDo:` random lines
-
-- `ToDo:` ImageViewer.js
-  - `ToDo:` image directory
+- [ ] ImageViewer.js
+  - [ ] image directory
 
 
 ## Abandoned
 - [-] splash screen
-- `Abandoned:` RandomClock.js
+- [ ] RandomClock.js
 
-- `Abandoned:` PoemReader.js
-  - `ToDo:` read .txt file
-  - `ToDo:` one .txt file per poem
-  - `ToDo:` create PoemTemplate to use for individual poems
+- [ ] PoemReader.js
+  - [ ] read .txt file
+  - [ ] one .txt file per poem
+  - [ ] create PoemTemplate to use for individual poems
 
-- `Abandoned:` ContinueCountdown.js
+- [ ] ContinueCountdown.js
   - Counter to default (100 - 0)
   - Continue (y/n)
   - Y: Continuing counter
   - N: skip rest of module
 
-- `Abandoned:` BartModule.js
+- [ ] BartModule.js
   - graph -> square
   - x + y: personal, public, private, professional
   - add time for third dimension
@@ -71,5 +73,5 @@ This is the Chaos Machine todo file
 
 ## Done
 - [] Update this section from git commits
-- `ToDo:` English haiku's
-  - `ToDo:` create english haiku's
+- [ ] English haiku's
+  - [ ] create english haiku's
