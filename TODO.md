@@ -28,36 +28,31 @@ This is the Chaos Machine todo file
 - [ ] login.js
   - [ ] login
   - [ ] logout
-
 - [ ] LevelUp.js
   - [ ] get level from file
   - [ ] show level
   - [ ] increment level
   - [ ] show new level
   - [ ] store level
-
 - [ ] KeyFinder.js
   - [ ] display message about the key
-
 - [ ] RandomCalculations.js
-
 - [ ] NameTaker.js
   - [ ] prompt for name
   - [ ] print: so, your name is 'x'. why don't I believe you
     - [ ] random lines
-
 - [ ] ImageViewer.js
   - [ ] image directory
+- [ ] PoemReader.js
+  - [ ] read .txt file
+  - [ ] one .txt file per poem
+  - [ ] create PoemTemplate to use for individual poems
+
 
 
 ## Abandoned
 - [-] splash screen
 - [ ] RandomClock.js
-
-- [ ] PoemReader.js
-  - [ ] read .txt file
-  - [ ] one .txt file per poem
-  - [ ] create PoemTemplate to use for individual poems
 
 - [ ] ContinueCountdown.js
   - Counter to default (100 - 0)
