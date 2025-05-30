@@ -1,5 +1,5 @@
 # Changelog
-
+Changelog for Chaos Machine
 
 ## [0.6.10] - 2025-05-25
 ### Changed
@@ -11,11 +11,9 @@
 ## [0.6.9] - 2025-05-25
 ### Added
 - create js/core/shared folder
-
 ### Fixed
 - create fileLoader.js to allow use of local .txt, .json and image files
 - ColorCmBackground.js: use colors.txt to load colors
-
 ### Changed
 - move GetRandomNumbers.js to js/core/shared
 
@@ -24,7 +22,6 @@
 ## [0.6.8] - 2025-05-24
 ### Fixed
 - show_progress.js: prevent 99% from showing as last result of loop
-
 ### Changed
 - ChaosMachine.js: comment out display of `--- Running ${module.name} ---`
 
@@ -66,7 +63,6 @@
 ### Fixed
 - ModuleContainer.js:
   - Start/stop routine
-
 ### Changed
 - GetRandomNumbers.js:
   - return number instead of percentage
@@ -93,7 +89,6 @@
 - ChaosMachine.js:
   - delay === Chaos Machine Started ===
   - delays module headers
-
 ### Fixed
 - ChaosMachine.js: clean up stopping routine after Stop button is clicked
 
@@ -125,7 +120,6 @@
 - Modules category: Colors
 - ColorDarkBlue.js
 - ColorDarkRed.js
-
 ### Changed
 - Width, height darkRed square.
 - Position top, left of darkRed square.
@@ -154,23 +148,15 @@
 
 
 # About Changelog.md
-All notable changes to this project will be documented in this file.
 
-MAJOR.MINOR.PATCH
-The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
-
-## [Unreleased]
+## [2.x.x]-date  // MAJOR.MINOR.PATCH-date
 ### Added
 - (New features, modules, or UI elements).
-
 ### Changed
 - (Existing functionality updates).
-
 ### Fixed
 - (Bug fixes).
-
 ### Removed
 - (Deprecated or removed features).
 
 ---
-
