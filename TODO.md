@@ -47,6 +47,9 @@ This is the Chaos Machine todo file
     - [ ] read .txt file
     - [ ] one .txt file per poem
     - [ ] create PoemTemplate to use for individual poems
+- [ ] shareYourThoughts.js
+    - [ ] prompt for thoughts
+    - [ ] make remark about how the shared thoughts are lost in cyberspace
 
 
 ## Abandoned
