@@ -12,6 +12,7 @@ This is the Chaos Machine todo file
 - [ ] Update ToDo section
 - [ ] Update Abandoned section
 - [ ] Update Done section
+- [ ] Move from PascalCase to lowerCamelCase when appropriate
 
 
 ## ToDo
