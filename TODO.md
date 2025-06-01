@@ -18,12 +18,10 @@ This is the Chaos Machine todo file
 ## ToDo
 
 ### Interface
-- [ ] app icons
-    - [ ] fit text in round icons
 - [ ] Menu button
     - [ ] About Chaos Machine
     - [ ] What's new
-    - [x] Dark theme
+    - [-] Dark theme
 
 ### Modules
 - [ ] login.js
@@ -71,3 +69,5 @@ This is the Chaos Machine todo file
 - [x] English haiku's
     - [x] create english haiku's
 - [-] Update this section from git commits
+- [*] app icons
+  - [*] fit text in round icons
