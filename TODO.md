@@ -12,6 +12,7 @@ This is the Chaos Machine todo file
 - [ ] Update ToDo section
 - [ ] Update Abandoned section
 - [ ] Update Done section
+- [ ] Move from PascalCase to lowerCamelCase when appropriate
 
 
 ## ToDo
@@ -28,25 +29,28 @@ This is the Chaos Machine todo file
 - [ ] login.js
     - [ ] login
     - [ ] logout
-- [ ] LevelUp.js
+- [ ] levelUp.js
     - [ ] get level from file
     - [ ] show level
     - [ ] increment level
     - [ ] show new level
     - [ ] store level
-- [ ] KeyFinder.js
+- [ ] keyFinder.js
     - [ ] display message about the key
-- [ ] RandomCalculations.js
-- [ ] NameTaker.js
+- [ ] randomCalculations.js
+- [ ] nameTaker.js
     - [ ] prompt for name
     - [ ] print: so, your name is 'x'. why don't I believe you
     - [ ] random lines
-- [ ] ImageViewer.js
+- [ ] imageViewer.js
     - [ ] image directory
-- [ ] PoemReader.js
+- [ ] poemReader.js
     - [ ] read .txt file
     - [ ] one .txt file per poem
     - [ ] create PoemTemplate to use for individual poems
+- [ ] shareYourThoughts.js
+    - [ ] prompt for thoughts
+    - [ ] make remark about how the shared thoughts are lost in cyberspace
 
 
 ## Abandoned
