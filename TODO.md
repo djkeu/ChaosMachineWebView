@@ -1,11 +1,8 @@
 # TODO
-
 This is the Chaos Machine todo file
-
 
 ## FixMe
 - [ ] Update Done section from git commits
-
 
 ## In Progress
 - [ ] Update FixMe section
@@ -14,15 +11,12 @@ This is the Chaos Machine todo file
 - [ ] Update Done section
 - [ ] Move from PascalCase to lowerCamelCase when appropriate
 
-
 ## ToDo
-
 ### Interface
 - [ ] Menu button
     - [ ] About Chaos Machine
     - [ ] What's new
     - [-] Dark theme
-
 ### Modules
 - [ ] login.js
     - [ ] login
@@ -50,7 +44,6 @@ This is the Chaos Machine todo file
     - [ ] prompt for thoughts
     - [ ] make remark about how the shared thoughts are lost in cyberspace
 
-
 ## Abandoned
 - [-] splash screen
 - [ ] RandomClock.js
@@ -63,7 +56,6 @@ This is the Chaos Machine todo file
     - [ ] graph -> square
     - [ ] x + y: personal, public, private, professional
     - [ ] add time for third dimension
-
 
 ## Done
 - [x] English haiku's
