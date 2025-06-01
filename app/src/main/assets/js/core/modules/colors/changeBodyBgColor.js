@@ -42,8 +42,8 @@ class ChangeBodyBgColor {
 
       randomTopPosition = utils.getRandomNumber(20, 80);
       randomLeftPosition = utils.getRandomNumber(30, 70);
-      randomFontSize = utils.getRandomNumber(50, 150);
-      randomBorderRadius = utils.getRandomNumber(30, 50);
+      randomFontSize = utils.getRandomNumber(70, 140);
+      randomBorderRadius = utils.getRandomNumber(0, 50);
 
       const randomColor = this.colors[Math.floor(Math.random() * this.colors.length)];
       console.log(`Selected color: ${randomColor}`);
