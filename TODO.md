@@ -18,8 +18,10 @@ This is the Chaos Machine todo file
     - [ ] What's new
     - [-] Dark theme
 ### Modules
-- [ ] login.js
+- [ ] createAccount.js
     - [ ] login
+    - [ ] message about data not being saved
+    - [ ] message: you will automatically logged out in xx seconds
     - [ ] logout
 - [ ] levelUp.js
     - [ ] get level from file
