@@ -18,7 +18,12 @@ This is the Chaos Machine todo file
     - [ ] What's new
     - [-] Dark theme
 ### Modules
-- [ ] createAccount.js
+- [ ] isThisAGame.js
+    - [ ] Game must start with this module
+    - [ ] display message: Is this a game?
+    - [ ] start screen or module
+    - [ ] proceed button
+- [ ] greetUser.js
     - [ ] login
     - [ ] message about data not being saved
     - [ ] message: you will automatically logged out in xx seconds
