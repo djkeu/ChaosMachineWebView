@@ -70,3 +70,4 @@ This is the Chaos Machine todo file
 - [-] Update this section from git commits
 - [*] app icons
   - [*] fit text in round icons
+- [*] changeOutputBgColor.js
