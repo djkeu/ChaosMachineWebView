@@ -2,6 +2,8 @@
 Changelog for Chaos Machine
 
 ## [0.6.10] - 2025-05-25
+### Added
+- changeOutputBgColor.js: changes background of the output div
 ### Changed
 - rename ColorCmBackground.js to changeBodyBgColor.js
 - rename class, button in changeBodyBgColor.js
