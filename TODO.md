@@ -65,8 +65,8 @@ This is the Chaos Machine todo file
     - [ ] add time for third dimension
 
 ## Done
-- [x] English haiku's
-    - [x] create english haiku's
+- [*] English haiku's
+    - [*] create english haiku's
 - [-] Update this section from git commits
 - [*] app icons
   - [*] fit text in round icons
