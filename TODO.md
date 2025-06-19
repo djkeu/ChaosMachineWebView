@@ -10,6 +10,11 @@ This is the Chaos Machine todo file
 - [ ] Update Abandoned section
 - [ ] Update Done section
 - [ ] Move from PascalCase to lowerCamelCase when appropriate
+- [ ] Update version number
+    - [ ] app/build.gradle
+    - [ ] Changelog.md
+    - [ ] about.json
+
 
 ## ToDo
 ### Interface
