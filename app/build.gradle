@@ -12,7 +12,7 @@ android {
         minSdk libs.versions.minSdk.get().toInteger()     // Changed from 21
         targetSdk libs.versions.targetSdk.get().toInteger() // Changed from 35
         versionCode 1
-        versionName "0.5.7"  // MAJOR.MINOR.PATCH
+        versionName "0.6.10"  // MAJOR.MINOR.PATCH
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
